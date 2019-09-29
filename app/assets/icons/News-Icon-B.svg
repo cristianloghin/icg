@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>News-Icon-B</title>
+    <desc>Created with Sketch.</desc>
+    <g id="News-Icon-B" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22,72 L80,72" id="Line-2" stroke="#009C56" stroke-width="4"></path>
+        <path d="M72,70 C72,59.4209207 72,50.4209207 72,43 C72,31.8686189 62.045695,23 51,23 C39.954305,23 30,31.8686189 30,43 L30,70" id="Oval" stroke="#009C56" stroke-width="4"></path>
+        <path d="M58,82 C58,77.581722 54.418278,74 50,74 C45.581722,74 42,77.581722 42,82" id="Oval-Copy" stroke="#009C56" stroke-width="4" transform="translate(50.000000, 78.000000) scale(1, -1) translate(-50.000000, -78.000000) "></path>
+        <path d="M38.5556695,15 C30.1297245,18.3568792 23.6104053,25.3545021 21.0314595,34" id="Oval-Copy-3" stroke="#009C56" stroke-width="4"></path>
+        <path d="M79.52421,15 C71.0982651,18.3568792 64.5789459,25.3545021 62,34" id="Oval-Copy-4" stroke="#009C56" stroke-width="4" transform="translate(70.762105, 24.500000) scale(-1, 1) translate(-70.762105, -24.500000) "></path>
+    </g>
+</svg>

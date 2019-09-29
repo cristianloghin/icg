@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Stock-Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Stock-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-Copy" stroke="#009C56" stroke-width="4" cx="50" cy="50" r="48"></circle>
+        <path d="M25.6306706,56.2145841 L37.6296192,43.509815 M42.7883351,44.136877 L53.6411099,56.3462487 M58.4401855,56.5598145 L71.3859863,43.6140137" id="Shape" stroke="#009C56" stroke-width="4"></path>
+        <circle id="Oval" stroke="#009C56" stroke-width="4" cx="74" cy="41" r="4"></circle>
+        <circle id="Oval-Copy-2" stroke="#009C56" stroke-width="4" cx="56" cy="59" r="4"></circle>
+        <circle id="Oval-Copy-3" stroke="#009C56" stroke-width="4" cx="40" cy="41" r="4"></circle>
+        <circle id="Oval-Copy-4" stroke="#009C56" stroke-width="4" cx="23" cy="59" r="4"></circle>
+    </g>
+</svg>

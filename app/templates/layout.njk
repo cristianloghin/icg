@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300,700&display=swap" rel="stylesheet">
+    <!--link rel="stylesheet" href="css/bootstrap.css"-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aos.css" />
+    <script src="js/aos.js"></script>
+    <title>Irish Continental Group || Home</title>
+</head>
+<body class="vh-100">
+    <!-- Header Partial -->
+    {% include "partials/header.njk" %}
+    <!-- Parallax Container -->
+    <div class="parallax-container">
+        <div class="background"></div>
+        <div class="foreground d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1">
+                {% block content %} {% endblock %}
+            </div>
+            <!-- Footer Partial -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    <script>
+
+        const set_header = () => {
+            const nav = $('header');
+            const top = 100;
+            const menuOpen = $('.navbar-collapse').hasClass('show') ? true : false;
+            if ($('.parallax-container').scrollTop() >= top && !menuOpen) {
+                nav.removeClass('expanded');
+            } else {
+                nav.addClass('expanded');
+            }
+        }
+
+        //AOS.init();
+        set_header();
+        // custom events
+        //window.addEventListener('scroll', _.debounce(set_header, 100));
+        $('.parallax-container').scroll( _.debounce(set_header, 100) );
+    </script>
+</body>
+</html>
