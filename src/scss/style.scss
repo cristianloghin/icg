@@ -1,15 +1,15 @@
 // Variable Overrides
 
 $font-family-sans-serif:      "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$headings-font-family:        "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;;
 $font-weight-normal:          300 !default;
 $enable-responsive-font-sizes: true;
-
 $enable-rounded: false;
 
 $theme-colors: (
     "primary": #02539A,
     "secondary": #009C56,
-    "info": #A2A2A2,
+    "info": #68ADDF,
     "light": #EAEAEA
 );
 
@@ -20,6 +20,9 @@ $theme-colors: (
 // Custom styles
 
 @import "layout";
+
+@import "typography";
+
 @import "header";
 
 @import "pages/home";

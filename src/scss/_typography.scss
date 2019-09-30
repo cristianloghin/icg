@@ -1,0 +1,12 @@
+// Typography
+
+p.lead {
+    font-size: $font-size-base;
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-base * 1.25;
+    }
+}
+
+b, strong {
+    font-weight: 700;
+}

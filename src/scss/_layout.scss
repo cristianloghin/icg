@@ -1,6 +1,3 @@
-b, strong {
-    font-weight: 700;
-}
 
 .small-icon {
     width: 2rem;
@@ -32,11 +29,29 @@ b, strong {
 
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top center;
 }
 
 .page-content {
     transform: translateZ(0px);
     width: 100%;
+}
+
+.viewport:not(#home) {
+    .page-banner {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 7rem;
+            padding-bottom: 1.5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 10rem;
+            padding-bottom: 2rem;
+        }
+    }
 }
 
 .animate {

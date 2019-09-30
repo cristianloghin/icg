@@ -7,40 +7,5 @@
 
     .jumbotron {
 
-        #bannerInfo {
-            padding-top: 7rem;
-            h1 {
-                text-shadow: 0 0 10px black;
-            }
-            #videoButton {
-
-                display: flex;
-                align-items: stretch;
-                padding: 0;
-
-                > span:first-child {
-                    flex-grow: 1;
-                    padding: .5rem 1rem;
-                }
-
-                > span:last-child {
-                    background-color: $gray-900;
-                    display: flex;
-                    align-items: center;
-                    padding: 0 1rem;
-                    > span:first-child {
-                        margin-right: .8rem;
-                    }
-                    > span:last-child {
-                        display: inline-block;
-                        width: 0;
-                        height: 0;
-                        border-style: solid;
-                        border-width: .4rem 0 .4rem .8rem;
-                        border-color: transparent transparent transparent $gray-600;
-                    }
-                }
-            }
-        }
     }
 }
