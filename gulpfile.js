@@ -11,7 +11,7 @@ const nunjucksRender = require('gulp-nunjucks-render');
 
 // File paths
 const files = { 
-    scssPath: ['node_modules/bootstrap/scss/bootstrap.scss', 'app/scss/*.scss'],
+    scssPath: ['node_modules/bootstrap/scss/bootstrap.scss', 'app/scss/*.scss', 'app/scss/pages/*.scss'],
     jsPath: ['app/js/*'],
     njkPath: ['app/pages/**/*.+(html|njk)', 'app/templates/**/*.+(html|njk)']
 }

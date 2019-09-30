@@ -12,24 +12,7 @@
     <title>Irish Continental Group | Home</title>
 </head>
 <body class="vh-100">
-    <!-- Header Partial -->
-    <!-- {% include "partials/header.njk" %} -->
-
-    {% import 'partials/macro-header.njk' as header %}
-    {{header.active('home')}}
-    
-    <!-- Parallax Container -->
-    <div class="viewport">
-        <div class="banner-background"></div>
-        <div class="page-content d-flex flex-column">
-            <!-- Page Content -->
-            <div class="flex-grow-1 content-wrapper">
-                {% block content %} {% endblock %}
-            </div>
-            <!-- Footer Partial -->
-            {% include "partials/footer.njk" %}
-        </div>
-    </div>
+    {% block content %} {% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.min.js"></script>
