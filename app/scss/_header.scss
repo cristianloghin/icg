@@ -87,7 +87,9 @@ header {
         }
         */
     }
-
+    .nav-item.dropdown .dropdown-item {
+        white-space: normal;
+    }
     .dropdown-toggle {
 
         @include media-breakpoint-down(md) {
@@ -99,6 +101,31 @@ header {
                 float: right;
                 margin-top: .6rem;
             }
+        }
+    }
+
+    div.dropdown-menu {
+        @include media-breakpoint-up(lg) {
+            min-width: 12rem;
+        }
+    }
+
+    #aboutDropdown + div.dropdown-menu,
+    #investorsDropdown + div.dropdown-menu {
+        @include media-breakpoint-up(lg) {
+            width: 38rem;
+        }
+    }
+
+    #aboutDropdown + div.dropdown-menu {
+        @include media-breakpoint-up(lg) {
+            left: -8rem;
+        }
+    }
+
+    #investorsDropdown + div.dropdown-menu {
+        @include media-breakpoint-up(lg) {
+            right: -11rem;
         }
     }
 }

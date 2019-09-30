@@ -12,7 +12,7 @@ const nunjucksRender = require('gulp-nunjucks-render');
 // File paths
 const files = { 
     scssPath: ['node_modules/bootstrap/scss/bootstrap.scss', 'app/scss/*.scss'],
-    jsPath: ['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'],
+    jsPath: ['app/js/*'],
     njkPath: ['app/pages/**/*.+(html|njk)', 'app/templates/**/*.+(html|njk)']
 }
 
@@ -27,19 +27,13 @@ function scssTask(){
     ); // put final CSS in dist folder
 }
 
-// JS task: concatenates and uglifies JS files to script.js
-function jsTask(){
-    return src(files.jsPath)
-        .pipe(dest('app/js')
-    );
-}
 
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask(){
     console.log(fileWatch);
     watch(fileWatch, series(
-        parallel(scssTask, jsTask, nunjucks),
+        parallel(scssTask, nunjucks),
         browserSyncReload
         )
     );    
@@ -74,6 +68,6 @@ function nunjucks() {
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
 exports.default = series(
-    parallel(scssTask, jsTask, nunjucks),
+    parallel(scssTask, nunjucks),
     parallel(serve, watchTask)
 );
