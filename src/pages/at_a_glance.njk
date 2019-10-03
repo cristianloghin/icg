@@ -14,7 +14,7 @@
             <!-- Page Content -->
             <div class="flex-grow-1 content-wrapper">
                 <section class="jumbotron jumbotron-fluid text-center vh-100 py-0 mb-0 bg-transparent position-relative">
-                    <div class="page-banner w-100 bg-white">
+                    <div class="page-banner w-100">
                         <div class="container d-flex flex-column">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -24,106 +24,186 @@
                             </div>
                         </div>
                     </div>
+                    <div class="bg-transparent text-center w-100 position-absolute" style="bottom: 0">
+                        <span class="large-icon down-icon" id="scrollDown"></span>
+                    </div>
                 </section>
                 <div class="content-sections bg-white">
-                    <section class="container mb-5">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-6 col-lg-5 mt-5 animate" data-anim="fade-in-bottom" data-anim-delay="0">
-                                <h3 class="text-secondary">Ferries Division</h3>
-                                <p>Modern fleet of multi-purpose ferries and LoLo container vessels operating between the Republic of Ireland and Britain and Continental Europe, and on charter.</p>
-                                <p>1.5 million passengers carried during 2018 on up to 17 daily sailings.</p>
-                                <p>Key freight positions on short sea routes between the Republic of Ireland and Britain.</p>
-                                <p>Inclusive package holidays to the Republic of Ireland and Britain.</p>
-                                <a href="#" class="btn btn-outline-secondary" role="button" aria-pressed="true">Find out more</a>
+                    <section class="container">
+                        <div class="row py-5">
+                            <div class="col-12 col-md-6 col-lg-5 offset-lg-1 d-flex flex-column animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                <div class="flex-grow-1">
+                                    <h3 class="text-secondary">Ferries Division</h3>
+                                    <p class="card-text mb-2">Modern fleet of multi-purpose ferries and LoLo container vessels operating between the Republic of Ireland and Britain and Continental Europe, and on charter.</p>
+                                </div>
+                                <div class="pt-2">
+                                    <a href="#" class="btn btn-outline-secondary btn-sm" role="button" aria-pressed="true">Read more</a>
+                                </div>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-5 mt-5 animate" data-anim="fade-in-bottom" data-anim-delay="50">
-                                <h3 class="text-secondary">Container and Terminal Division</h3>
-                                <p>Container shipping services between Ireland and Continental Europe, operating modern fleet and equipment, as well as stevedoring and related services for container traffic at Dublin and Belfast Ports.</p>
-                                <a href="#" class="btn btn-outline-secondary" role="button" aria-pressed="true">Find out more</a>
+                            <div class="col-12 col-md-6 col-lg-5 d-flex flex-column animate" data-anim="fade-in-bottom" data-anim-delay="50">
+                                <div class="flex-grow-1">
+                                    <h3 class="text-secondary">Container and Terminal Division</h3>
+                                    <p class="card-text mb-2">Container shipping services between Ireland and Continental Europe, operating modern fleet and equipment, as well as stevedoring and related services for container traffic at Dublin and Belfast Ports.</p>
+                                </div>
+                                <div class="pt-2">
+                                    <a href="#" class="btn btn-outline-secondary btn-sm" role="button" aria-pressed="true">Read more</a>
+                                </div>
                             </div>
                         </div>
                     </section>
                     <section class="py-5 container border-top">
-                        <div class="row">
-                            <div class="col-12 col-lg-10 offset-lg-1 animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                        <div class="row animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                            <div class="col-12">
+                                <h3 class="text-secondary text-center">Group Financial Performance Highlights YE2018</h3>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-12 col-md-3 text-center">
+                                <h5>Revenue</h5>
+                                <div id="chart-1" class="chart py-3 animate" data-anim="play" data-anim-delay="0" data-type="pie" data-values="194.8;135.4"></div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <h5>Operating Profit</h5>
+                                <div id="chart-2" class="chart py-3 animate" data-anim="play" data-anim-delay="1000" data-type="pie" data-values="34.2;12.1"></div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <h5>Capital Employed</h5>
+                                <div id="chart-3" class="chart py-3 animate" data-anim="play" data-anim-delay="2000" data-type="pie" data-values="111.6;33.4"></div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <h5>EBITDA</h5>
+                               <div id="chart-4" class="chart py-3 animate" data-anim="play" data-anim-delay="3000" data-type="pie" data-values="53.4;15.0"></div>
+                            </div>
+                            <div class="col-12 text-center pt-3">
+                                <span class="dot-secondary-100 small text-muted">Ferries Division</span>
+                                <span class="dot-info-50 small ml-3 text-muted">Container and Terminal Division</span>
+                            </div>
+                            <div class="col-12 text-center pt-5">
+                                <a class="btn btn-outline-secondary" href="#" role="button">More Financial Highlights</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="py-5 container border-top">
+                        <div class="row animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                            <div class="col-12 col-lg-10 offset-lg-1">
                                 <h3 class="text-secondary text-center">Irish Continental Group is a customer focussed business with a pivotal position in the logistics chain facilitating Ireland’s international trade and tourism.</h3>
                             </div>
+                        </div>
+                        <div class="row animate" data-anim="fade-in-bottom" data-anim-delay="0">
                             <div class="col-12">
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-3 mt-4">
-                                        <div class="card h-100 border-0 shadow animate" data-anim="fade-in-bottom" data-anim-delay="0">
-                                            <img src="https://place-hold.it/360x120" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                Strategic short sea RoRo routes operated by Irish Ferries providing a seamless connection from Ireland to the UK and Continental motorway network for the 283,700 RoRo units carried in 2018.
+                                <div id="highlightsCarousel" class="carousel slide" data-ride="false" data-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                                                    <div class="card h-100 border-0 text-center">
+                                                        <img class="w-33 mx-auto" src="assets/icons/truck-icon.svg" class="card-img-top" alt="truck icon">
+                                                        <div class="card-body">
+                                                            Strategic short sea RoRo routes operated by Irish Ferries providing a seamless connection from Ireland to the UK and Continental motorway network for the 283,700 RoRo units carried in 2018.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                                                    <div class="card h-100 border-0 text-center">
+                                                        <img class="w-33 mx-auto" src="assets/icons/clock-icon.svg" class="card-img-top" alt="clock icon">
+                                                        <div class="card-body">
+                                                            Reliability underpinned by major investment in tonnage and maintenance of quality assets ensuring the high levels of schedule integrity demanded by our customers.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                                                    <div class="card h-100 border-0 text-center">
+                                                        <img class="w-33 mx-auto" src="assets/icons/navigation-icon.svg" class="card-img-top" alt="navigation icon">
+                                                        <div class="card-body">
+                                                            Strategically located container terminals which handled 310,000 container units during 2018 in Ireland’s main orts of Dublin and Belfast for shipping operators providing services to key continental hub ports and onwards access to global markets.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                                                    <div class="card h-100 border-0 text-center">
+                                                        <img class="w-33 mx-auto" src="assets/icons/shipping-icon.svg" class="card-img-top" alt="shipping icon">
+                                                        <div class="card-body">
+                                                            Connected container transport services provided by Eucon, transporting 327,600 teu (twenty foot equivalent unit) in 2018 between Ireland and 20 countries throughout Europe by sea, road, rail and barge.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                                                    <div class="card h-100 border-0 text-center">
+                                                        <img class="w-33 mx-auto" src="assets/icons/online-icon.svg" class="card-img-top" alt="online icon">
+                                                        <div class="card-body">
+                                                            Always on, always in touch our shipping and terminal services operate 24/7, assisted by investment in modern booking and tracking systems to ensure our customers can keep in touch over a variety of platforms.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                                                    <div class="card h-100 border-0 text-center">
+                                                        <img class="w-33 mx-auto" src="assets/icons/location-icon.svg" class="card-img-top" alt="location icon">
+                                                        <div class="card-body">
+                                                            Fastest crossing on the Irish sea on board the Irish Ferries Dublin Swift fastcraft service with a sailing time of 2 hours between Dublin and Holyhead at speeds of up to 65 kph.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                                                    <div class="card h-100 border-0 text-center">
+                                                        <img class="w-33 mx-auto" src="assets/icons/baggage-icon.svg" class="card-img-top" alt="baggage icon">
+                                                        <div class="card-body">
+                                                            Key contributor to regional tourism in Ireland, Irish Ferries carried 1.5 million passengers and 392,700 cars during 2018 with research indicating that car tourists stay longer and travel outside the main urban centres.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                                                    <div class="card h-100 border-0 text-center">
+                                                        <img class="w-33 mx-auto" src="assets/icons/food-icon.svg" class="card-img-top" alt="food icon">
+                                                        <div class="card-body">
+                                                            High standard onboard experience enjoyed by our Irish Ferries customers encompasses quality food, beverage, entertainment and accommodation services. Passengers are never out of touch with free satellite wi-fi services.
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mt-4">
-                                        <div class="card h-100 border-0 shadow animate" data-anim="fade-in-bottom" data-anim-delay="50">
-                                            <img src="https://place-hold.it/360x120" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                Reliability underpinned by major investment in tonnage and maintenance of quality assets ensuring the high levels of schedule integrity demanded by our customers.
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <div class="col-12 col-sm-6 col-lg-3 mt-4">
-                                        <div class="card h-100 border-0 shadow animate" data-anim="fade-in-bottom" data-anim-delay="100">
-                                            <img src="https://place-hold.it/360x120" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                Strategically located container terminals which handled 310,000 container units during 2018 in Ireland’s main orts of Dublin and Belfast for shipping operators providing services to key continental hub ports and onwards access to global markets.
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <div class="col-12 col-sm-6 col-lg-3 mt-4">
-                                        <div class="card h-100 border-0 shadow animate" data-anim="fade-in-bottom" data-anim-delay="150">
-                                            <img src="https://place-hold.it/360x120" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                Connected container transport services provided by Eucon, transporting 327,600 teu (twenty foot equivalent unit) in 2018 between Ireland and 20 countries throughout Europe by sea, road, rail and barge.
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <a class="carousel-control-prev" href="#highlightsCarousel" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#highlightsCarousel" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-3 mt-4">
-                                        <div class="card h-100 border-0 shadow animate" data-anim="fade-in-bottom" data-anim-delay="0">
-                                            <img src="https://place-hold.it/360x120" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                Always on, always in touch our shipping and terminal services operate 24/7, assisted by investment in modern booking and tracking systems to ensure our customers can keep in touch over a variety of platforms.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mt-4">
-                                        <div class="card h-100 border-0 shadow animate" data-anim="fade-in-bottom" data-anim-delay="50">
-                                            <img src="https://place-hold.it/360x120" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                Fastest crossing on the Irish sea on board the Irish Ferries Dublin Swift fastcraft service with a sailing time of 2 hours between Dublin and Holyhead at speeds of up to 65 kph.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mt-4">
-                                        <div class="card h-100 border-0 shadow animate" data-anim="fade-in-bottom" data-anim-delay="100">
-                                            <img src="https://place-hold.it/360x120" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                Key contributor to regional tourism in Ireland, Irish Ferries carried 1.5 million passengers and 392,700 cars during 2018 with research indicating that car tourists stay longer and travel outside the main urban centres.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mt-4">
-                                        <div class="card h-100 border-0 shadow animate" data-anim="fade-in-bottom" data-anim-delay="150">
-                                            <img src="https://place-hold.it/360x120" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                High standard onboard experience enjoyed by our Irish Ferries customers encompasses quality food, beverage, entertainment and accommodation services. Passengers are never out of touch with free satellite wi-fi services.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a class="btn btn-outline-secondary" href="#" role="button">Our Business Model</a>
                             </div>
                         </div>
                     </section>
-                    <section class="py-5 container border-top">
-                        <div class="row">
+                    <section class="pt-5 pb-2 container border-top">
+                        <div class="row animate" data-anim="fade-in-bottom" data-anim-delay="0">
                             <div class="col-12">
-                                <h2 class="text-secondary text-center">Group Financial Performance Highlights YE2018</h2>
+                                <h3 class="text-secondary text-center">Subsidiary companies</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex align-items-center">
+                                <a href="#" class="subs-logo animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                    <img src="assets/branding/subsidiaries/if-logo.jpg" class="img-fluid" alt="Irish Ferries">
+                                </a>
+                                <a href="#" class="subs-logo animate" data-anim="fade-in-bottom" data-anim-delay="50">
+                                    <img src="assets/branding/subsidiaries/iff-logo.jpg" class="img-fluid" alt="Irish Ferries Freight">
+                                </a>
+                                <a href="#" class="subs-logo animate" data-anim="fade-in-bottom" data-anim-delay="100">
+                                    <img src="assets/branding/subsidiaries/eucon-logo.png" class="img-fluid" alt="Eucon">
+                                </a>
+                                <a href="#" class="subs-logo animate" data-anim="fade-in-bottom" data-anim-delay="150">
+                                    <img src="assets/branding/subsidiaries/dft-logo.jpg" class="img-fluid" alt="Dublin Ferryport Terminals">
+                                </a>
+                                <a href="#" class="subs-logo animate" data-anim="fade-in-bottom" data-anim-delay="200">
+                                    <img src="assets/branding/subsidiaries/bct-logo.jpg" class="img-fluid" alt="Belfast Container Terminals">
+                                </a>
                             </div>
                         </div>
                     </section>

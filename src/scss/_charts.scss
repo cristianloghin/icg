@@ -1,0 +1,70 @@
+
+.new-chart {
+
+    > svg {
+        width: 100%;
+        transform: rotate(-90deg);
+
+        path {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 30;
+
+            &.secondary {
+                stroke: #009C56;
+            }
+            &.info {
+                stroke: #68ADDF;
+                stroke-opacity: .5;
+            }
+        }
+        text {
+            font-family: $headings-font-family;
+            font-weight: 300;
+            fill: black;
+            opacity: 0;
+            text-anchor: middle;
+            transition: opacity .3s ease-out;
+            transition-delay: 1.5s; 
+
+            &.total {
+                font-size: 3rem;
+            }
+            &.label_1,
+            &.label_2 {
+                font-size: 2rem;
+            }
+
+            &.label_1 {
+                fill: #009C56;
+            }
+
+            &.label_2 {
+                fill: #68ADDF;
+            }
+        }
+    }
+
+    @keyframes dash {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    &.in > svg {
+
+        text {
+            opacity: 1;
+        }
+
+        path.secondary {
+            animation: dash 1s ease-in-out forwards;
+        }
+
+        path.info {
+            animation: dash 1s ease-in-out forwards;
+            animation-delay: .9s;
+        }
+    }
+    
+}

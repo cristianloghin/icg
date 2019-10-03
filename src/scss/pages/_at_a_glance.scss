@@ -8,4 +8,13 @@
     .jumbotron {
 
     }
+
+    .subs-logo {
+        flex: 0 1 20%;
+        padding: $spacer * 2.5;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }

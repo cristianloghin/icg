@@ -1,67 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
-    <title>Hello, world!</title>
-    <style>
-        
-        html, body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-        * {
-            box-sizing: border-box;
-        }
 
-        .parallax {
-            background-size: cover;
-            box-sizing: border-box;
-            width: 100%;
-            height: 130vh;
-            /* Since the parallax elements still consume space, we set the margin to undo
-                the height of this parallax element making it essentially consume 0 space.
-            */
-            margin-bottom: -130vh;
-        }
-
-        p {
-            color: white;
-            margin: 1em 0;
-            z-index: 1;
-            position: relative;
-        }
-
-        .viewport {
-            height: 100%;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            position: relative;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .banner {
-            background-image: url('assets/images/home-banner.jpg');
-        }
-
-    </style>
-  </head>
-  <body>
-    <header></header>
-    <div class="viewport">
-        <div class="parallax banner"></div>
-        <div style="height: 100vh; color: white"><h1>Hello, world!</h1></div>
-        <div style="height: 100vh; background: red"><h2>Hello, world!</h1></div>
-        <footer>Footer</footer>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:300,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Irish Continental Group | Home</title>
+</head>
+<body class="vh-100">
+    
+    
+    <!-- Content -->
+    <div class="viewport" id="at_a_glance">
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <div class="content-sections bg-white">
+                    <section class="py-5 container border-top">
+                        <div class="row animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                            <div class="col-12">
+                                <h3 class="text-secondary text-center">Group Financial Performance Highlights YE2018</h3>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-12 col-md-3 text-center">
+                                <h5>Revenue</h5>
+                                <div id="new-chart-1" class="new-chart py-3 animate" data-anim="play" data-anim-delay="0" data-type="pie" data-values="194.8;135.4;200.1"></div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <h5>Operating Profit</h5>
+                                <div id="new-chart-2" class="new-chart py-3 animate" data-anim="play" data-anim-delay="1000" data-type="pie" data-values="34.2;12.1"></div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <h5>Capital Employed</h5>
+                                <div id="new-chart-3" class="new-chart py-3 animate" data-anim="play" data-anim-delay="2000" data-type="pie" data-values="111.6;33.4;4.0;200.5"></div>
+                            </div>
+                            <div class="col-12 col-md-3 text-center">
+                                <h5>EBITDA</h5>
+                               <div id="new-chart-4" class="new-chart py-3 animate" data-anim="play" data-anim-delay="3000" data-type="pie" data-values="53.4;15.0"></div>
+                            </div>
+                            <div class="col-12 text-center pt-3">
+                                <span class="dot-secondary-100 small text-muted">Ferries Division</span>
+                                <span class="dot-info-50 small ml-3 text-muted">Container and Terminal Division</span>
+                            </div>
+                            <div class="col-12 text-center pt-5">
+                                <a class="btn btn-outline-secondary" href="#" role="button">More Financial Highlights</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="js/parallax.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeParallax(document.querySelector('.viewport'));
-        });
-    </script>
-  </body>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
