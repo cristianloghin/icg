@@ -12,7 +12,7 @@ const babel = require('gulp-babel');
 
 // File paths
 const files = { 
-    scssPath: ['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss', 'src/scss/pages/*.scss'],
+    scssPath: ['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss', 'src/scss/**/*.scss'],
     jsPath: ['src/js/*'],
     njkPath: ['src/pages/**/*.+(html|njk)', 'src/templates/**/*.+(html|njk)']
 }

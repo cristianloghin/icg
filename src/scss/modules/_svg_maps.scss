@@ -1,0 +1,119 @@
+// SVG maps
+.svg-map {
+    
+    path.fill-info {
+        fill: map-get($theme-colors, info);
+    }
+    .fill-secondary {
+        fill: map-get($theme-colors, secondary);
+    }
+    path.stroke-info {
+        stroke: map-get($theme-colors, info);
+    }
+    path.stroke-secondary {
+        stroke: map-get($theme-colors, secondary);
+    }
+    path.stroke-danger {
+        stroke: map-get($theme-colors, danger);
+    }
+    
+    .borders {
+        stroke: $gray-400;
+    }
+    .background {
+        fill: map-get($theme-colors,light);
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        transition-delay: 2s;
+    }
+    .countries {
+        font-family: $headings-font-family;
+        font-size: 8px;
+        opacity: 0;
+        transition: opacity .5s ease-out;
+        transition-delay: 2.5s;
+    }
+    .ports {
+        text {
+            font-family: $headings-font-family;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity .5s ease-out;
+        }
+        circle {
+            transition: transform .5s ease-in-out;
+            transform: scale(0);
+        }
+
+        g text, g circle {
+            transition-delay: 2s;
+        }
+
+        g.delay-2 text,
+        g.delay-2 circle {
+            transition-delay: 4.25s;
+        }
+        g.delay-4 text,
+        g.delay-4 circle {
+            transition-delay: 6.25s;
+        }
+        g.delay-6 text,
+        g.delay-6 circle {
+            transition-delay: 8.25s;
+        }
+    }
+    .routes {
+        stroke: map-get($theme-colors, info);
+        stroke-width: 2px;
+    }
+}
+
+.svg-map.in {
+
+    .background {
+        opacity: 1;
+    }
+
+    .countries {
+        opacity: .25;
+    }
+
+    .ports {
+        text {
+            opacity: 1;
+        }
+        circle {
+            transform: scale(1);
+        }
+    }
+
+    .borders path {
+        animation: routes-dash 2s ease-in-out forwards;
+    }
+
+    .routes path {
+        animation: routes-dash 2s ease-in-out forwards;
+        animation-delay: 2.5s;
+        &.delay-2 {
+            animation-delay: 4s;
+        }
+        &.delay-4 {
+            animation-delay: 6s;
+        }
+        &.delay-6 {
+            animation-delay: 8s;
+        }
+    }
+}
+
+@keyframes routes-dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes borders-dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

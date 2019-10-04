@@ -1,0 +1,67 @@
+// icons
+
+@mixin dot($color, $opacity) {
+    position: relative;
+    line-height: $spacer * 1.125;
+    display: inline-block;
+    padding-left: $spacer * 1.5;
+    &:before {
+        content: '';
+        display: block;
+        width: $spacer * 1.125;
+        height: $spacer * 1.125;
+        background-color: $color;
+        opacity: $opacity;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+    }
+}
+
+@mixin line($color, $opacity) {
+    position: relative;
+    line-height: $spacer * 1.125;
+    display: inline-block;
+    padding-left: $spacer * 1.5;
+    &:before {
+        content: '';
+        display: block;
+        width: $spacer * 1.125;
+        height: $spacer / 4;
+        background-color: $color;
+        opacity: $opacity;
+        position: absolute;
+        top: $spacer / 2.5;
+        left: 0;
+        border-radius: $spacer / 8;
+    }
+}
+
+.dot-secondary-100 {
+    @include dot(map-get($theme-colors,secondary), 1);    
+}
+
+.dot-info-50 {
+    @include dot(map-get($theme-colors,info), .5);   
+}
+
+.dot-info-100 {
+    @include dot(map-get($theme-colors,info), 1);   
+}
+
+.dot-light-100 {
+    @include dot(map-get($theme-colors,light), 1);   
+}
+
+.line-secondary-100 {
+    @include line(map-get($theme-colors,secondary), 1);   
+}
+
+.line-info-100 {
+    @include line(map-get($theme-colors,info), 1);   
+}
+
+.line-danger-100 {
+    @include line(map-get($theme-colors,danger), 1);   
+}

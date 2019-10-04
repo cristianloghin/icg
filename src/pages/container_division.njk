@@ -1,0 +1,75 @@
+<!-- container_division.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('container_division')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="container_division">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center vh-100 py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Container and Terminal Division</h1>
+                                    <p class="lead text-primary">The Container and Terminal Division principal activities include LoLo shipping activities under the Eucon brand and the operation of two container terminals, Dublin Ferryport Terminals (DFT) and Belfast Container Terminal (BCT), within the two main ports on the island of Ireland.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-transparent text-center w-100 position-absolute" style="bottom: 0">
+                        <span class="large-icon down-icon" id="scrollDown"></span>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="container py-5">
+                        <div class="row pb-5">
+                            <div class="col-12 col-lg-10 offset-lg-1 animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                <h3 class="text-secondary">Eucon</h3>
+                                <p class="lead mb-2">Eucon is the market leader in the sector, operating a fleet of chartered container vessels ranging in size from 750 – 1,000 teu capacity, connecting the Irish ports of Dublin, Cork and Belfast with the Continental ports of Rotterdam and Antwerp. Eucon deploys 3,800 owned and leased containers (equivalent to 7,400 teu) of varying types thereby offering a full range of services from palletised, project and temperature controlled cargo to Irish and European importers and exporters from all points on the island of Ireland to destinations across 20 European countries.</p>
+                                <a href="http://www.eucon.nl/" target="_blank" class="btn btn-outline-secondary btn-sm" role="button" aria-pressed="true">eucon.nl</a>
+                            </div>
+                        </div>
+                        <div class="row border-top pt-5">
+                            <div class="col-12 col-lg-5 offset-lg-1 animate" data-anim="fade-in-left" data-anim-delay="0">
+                                <h3 class="text-secondary">Dublin Ferryport Terminals</h3>
+                                <p class="card-text mb-2">Dublin Ferryport Terminals operates its Dublin Port container facility from a leasehold facility covering over 32 acres. The facilities comprise 480 metres of berths for container ships, with a depth of 9 to 11 metres and is equipped with 3 modern Liebherr gantry cranes (40 tonne capacity) and 10 rubber tyred gantries (40 tonne capacity) on a strategically located site within three kilometres of Dublin city centre and within one kilometre of the Dublin Port Tunnel, providing direct access to Ireland’s motorway network. The rubber tyred gantries include the addition of two electrically operated rubber tyred gantries incorporating latest technologies to allow for remote operation were commissioned during the year.</p>
+                            </div>
+                             <div class="col-12 col-lg-5 animate" data-anim="fade-in-right" data-anim-delay="0">
+                                <h3 class="text-secondary">Belfast Container Terminal</h3>
+                                <p class="card-text mb-2">Belfast Container Terminal operates the sole container terminal at Belfast under a services concession agreement with Belfast Harbour Commissioners (BHC). This facility comprises of a 27 acre site, equipped with 3 ship to shore gantry cranes, 3 rail mounted gantry cranes and 3 straddle carriers.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="container py-5 border-top">
+                        <div class="row animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                            <div class="col-12">
+                                <h3 class="text-secondary text-center">Container Routes</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-10 offset-lg-1 text-center svg-map animate" data-anim="play">
+                                {% include "partials/container_routes.njk" %}
+                            </div>
+                            <div class="col-12 text-center pt-3">
+                                <span class="dot-info-100 small text-muted">Ports Served by Container Ships</span>
+                                <span class="dot-light-100 small ml-3 text-muted">Eucon Geographic Coverage</span>
+                                <span class="line-info-100 small ml-3 text-muted">Eucon Routes</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

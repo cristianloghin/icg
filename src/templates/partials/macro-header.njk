@@ -49,9 +49,9 @@
                                 Our Business
                                 </a>
                                 <div class="dropdown-menu bg-light border-0 mt-0" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Ferries Division</a>
-                                <a class="dropdown-item" href="#">Container and Terminal Division</a>
-                                <a class="dropdown-item" href="#">Our Fleet</a>
+                                <a class="dropdown-item {%if activePage == 'ferries_division' %} active {% endif %}" href="ferries_division.html">Ferries Division</a>
+                                <a class="dropdown-item {%if activePage == 'container_division' %} active {% endif %}" href="container_division.html">Container and Terminal Division</a>
+                                <a class="dropdown-item {%if activePage == 'our_fleet' %} active {% endif %}" href="our_fleet.html">Our Fleet</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">

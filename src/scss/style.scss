@@ -9,7 +9,8 @@ $theme-colors: (
     "primary": #02539A,
     "secondary": #009C56,
     "info": #68ADDF,
-    "light": #EAEAEA
+    "light": #EAEAEA,
+    "danger": #ff5100
 );
 
 $border-radius: 4px;
@@ -28,36 +29,18 @@ $border-radius: 4px;
 
 @import "charts";
 
+@import "icons";
+
+@import "modules/animate";
+@import "modules/svg_maps";
+
+// Pages
 @import "pages/home";
 @import "pages/at_a_glance";
+@import "pages/ferries_division";
+@import "pages/container_division";
+@import "pages/our_fleet";
 
-
-@mixin dot($color, $opacity) {
-    position: relative;
-    line-height: $spacer * 1.125;
-    display: inline-block;
-    padding-left: $spacer * 1.5;
-    &:before {
-        content: '';
-        display: block;
-        width: $spacer * 1.125;
-        height: $spacer * 1.125;
-        background-color: $color;
-        opacity: $opacity / 100;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 50%;
-    }
-}
-
-.dot-secondary-100 {
-    @include dot(#009C56, 100);    
-}
-
-.dot-info-50 {
-    @include dot(#68ADDF, 50);   
-}
 
 /******* CAROUSEL ********/
 
