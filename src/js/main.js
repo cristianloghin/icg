@@ -24,7 +24,7 @@ charts.forEach( chart => {
         // Update element animations on scroll
         viewport2.addEventListener('scroll', _.throttle(animate, 100));
 
-    } catch (err) { console.error("Animations on scroll fail", err) }
+    } catch (err) { console.error("Animations on Scroll Error:", err) }
 
     // Initialize SVG maps (if present)
     try {
@@ -36,6 +36,6 @@ charts.forEach( chart => {
             path.setAttribute('stroke-dashoffset', path.getTotalLength());
         });
     
-    } catch (err) { console.error("SVG Maps fail", err) }
+    } catch (err) { console.error("SVG Maps Error:", err) }
     
 })();

@@ -1,0 +1,68 @@
+<!-- risk_management.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('risk_management')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="risk_management">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Risk Management</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 pb-5">
+                                <p class="lead">The ICG Board holds overall responsibility for the Group’s risk management and internal control systems, including the setting of acceptable risk levels to achieve its strategic objectives. The design and management of the Group control systems are bound by these risk parameters set by the Board.</p>
+                            </div>
+                            <div class="col-lg-10 offset-lg-1">
+                                <h3 class="text-secondary">Risk Culture</h3>
+                            </div>
+                            <div class="col-lg-6 offset-lg-1">
+                                <p>The nature of the Group’s business, which is primarily the operation of ships and provision of related services, is such that operational safety is paramount. Significant risks include risks to operational safety as well as financial risks. Controls systems to address risks to operational safety are designed to minimise the effects of known risks to tolerances within the risk appetite set by the Board. This strong safety culture contributes to the strong overall risk culture of the Group. Our Group Risk Management function comprises an Operations Risk Manager for the Ferries Division and a Group Marine and Safety Manager. The Group Risk Management function reviews key business processes and controls. In addition to the Group Risk Management function is the Group Internal Audit function, both of which are key components of the risk management framework set out on the graph below.</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5 class="text-secondary">Principal Risks and Uncertainties</h5>
+                                <p>A copy of the principal risks and uncertainties facing the Group is available for download by clicking on the link below.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <h3 class="text-secondary">Risk Management Framework</h3>
+                            </div>
+                            <div class="col-lg-10 offset-lg-1">
+                                Graph
+                            </div>
+                            <div class="col-lg-8 offset-lg-2">
+                                <p>The Group adopts a ‘three lines of defence’ risk management framework incorporating Divisional Management (first line of defence), Group Risk Management and other oversight functions (second line of defence) and Internal Audit (third line of defence). This model allows for input across all levels of the business to help manage current risks and to keep abreast of emerging risks.</p>
+                                <p>The first line functions design and execute the application of internal controls measures on a daily basis. The second line functions undertake oversight and compliance roles and includes the Group Risk Management function who reports directly on risk matters to the Audit Committee. The third line, consisting of the Group Internal Audit function, performs independent oversight of the first two lines and reports directly to the Audit Committee on matters of internal control, compliance and governance.</p>
+                                <p>The Group maintains a risk register which identifies the nature and extent of the risks faced by each business unit and the Group overall, covering financial, operational, and compliance controls and risk management. These risks are prioritised in terms of likelihood of occurrence, estimated financial impact and the Group’s ability to reduce the incidence and impact on business operations should any risk materialise. This prioritisation is determined through the use of a traffic light scoring system. Risks are coloured green, amber or red in order of seriousness. The risk register is reviewed on a regular basis by management. Reporting by management on the identified principal risks is covered within the regular Board meeting agenda and this forms the basis of the continuous risk monitoring process. The Board separately conducts an annual assessment of the significant risks and uncertainties facing the Group, and the adequacy of the monitoring and reporting system maintained by management. No material weaknesses were noted by the Board during the year.</p>
+                                <p>The Audit Committee has been delegated by the Board with the task of assessing the Group’s internal control and risk management systems. This assessment is carried out through the review of regularly produced reports by the Group Risk Management function and Group Internal Audit. The Audit Committee also reviews the risk register co-prepared by individuals within the three lines of defence. Full details of the activities performed by the Audit Committee can be found on the 2018 Audit Committee Report.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

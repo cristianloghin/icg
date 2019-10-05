@@ -1,0 +1,97 @@
+<!-- governance_statement.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('governance_statement')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="governance_statement">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Corporate Governance Statement</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 pb-5 animate" data-anim="fade-in-bottom">
+                                <p class="lead">Corporate Governance is concerned with how companies are directed and controlled. Your Board acknowledges the importance of, and is committed to maintaining high standards of Corporate Governance practices. We strongly believe that good corporate governance is essential to long-term sustainable growth and maintenance of shareholder value. The Board sets the tone for governance practices across the whole Group.</p>
+                            </div>
+                            <div class="col-lg-5 offset-lg-1 animate" data-anim="fade-in-bottom" data-anim-delay="100">
+                                <h3 class="text-secondary">Our Approach</h3>
+                                <p>Irish Continental Group’s approach to corporate governance is explained in our Corporate Governance Report included within the 2018 Annual Report. This report also describes the roles and responsibilities of our Board and its Committees and the Group’s approach to risk management and internal control.</p>
+                                <p>The main function of the Board is to provide strong strategic guidance and oversight of the performance of the Group on behalf of shareholders. The Board actively considers long term strategy and monitors and supports the work of the Group Executive Management team.</p>
+                                <p>The role of the Group Chairman is to seek to ensure high quality decision-making in all areas of strategy and performance and to promote and maintain high-standards of corporate governance.</p>
+                            </div>
+                            <div class="col-lg-5 animate" data-anim="fade-in-bottom" data-anim-delay="200">
+                                <h3 class="text-secondary">Compliance</h3>
+                                <p>In compliance with the Irish Annex published by the Irish stock exchange and the UK Corporate Governance code (2014), the Board has established three committees;</p>
+                                <ul>
+                                    <li>Audit Committee</li>
+                                    <li>Nomination Committee; and</li>
+                                    <li>Remuneration Committee.</li>
+                                </ul>
+                                <p>The Board values corporate governance and this is reflected in the Group’s governance framework as well as by the principles, policies and practices that are applied every day across the Group. The corporate governance section of the 2018 Annual Report explains how we have applied the main principles of the UK Corporate Governance Code (2014) and the Irish Annex during 2018.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <h3 class="text-secondary text-center animate" data-anim="fade-in-bottom">Corporate Governance Framework</h3>
+                            </div>
+                            <div class="col-lg-10 offset-lg-1">
+                                <div class="framework">
+                                    <div class="block animate" data-anim="fade-in-top" data-anim-delay="500" data-anim-offset="200">
+                                        <div class="box box-1 arrow-down-normal"><div><span>Chairman</span></div></div>
+                                    </div>
+                                    <div class="block animate" data-anim="fade-in-top" data-anim-delay="500" data-anim-offset="200">
+                                        <div class="box box-2 arrow-down-short fb-50"><div><span>Board of Directors</span></div></div>
+                                    </div>
+                                    <div class="block box-wrapper animate" data-anim="fade-in-top" data-anim-delay="500" data-anim-offset="200">
+                                        <div class="box box-1"><div><span>Company Secretary</span></div></div>
+                                        <div class="box box-1"><div><span>Audit Committe</span></div></div>
+                                        <div class="box order-lg-2 box-1"><div><span>Remuneration Committee</span></div></div>
+                                        <div class="box order-lg-3 box-1"><div><span>Nomination Committee</span></div></div>
+                                        <div class="box order-lg-1 box-1 arrow-down-normal"><div><span>Chief Executive</span></div></div>
+                                    </div>
+                                    <div class="block animate" data-anim="fade-in-top" data-anim-delay="500" data-anim-offset="200">
+                                        <div class="box box-3 arrow-down-short fb-50"><div><span>Executive Management Team</span></div></div>
+                                    </div>
+                                    <div class="block box-wrapper animate" data-anim="fade-in-top" data-anim-delay="500" data-anim-offset="200">
+                                        <div class="box box-1"><div><span>Business Functions</span></div></div>
+                                        <div class="box box-1"><div><span>Divisional Boards</span></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <p>The Corporate Governance Report is available for download by clicking the link on your right.</p>
+                                <a target="_blank" href="http://sourcestaging.com/20905_ICG_V6/wp-content/uploads/2019/06/icg_cg_report.pdf">2018 Corporate Governance Report</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -94,30 +94,35 @@ header {
         }
     }
 
-    div.dropdown-menu {
+    .dropdown-menu-col {
         @include media-breakpoint-up(lg) {
-            min-width: 12rem;
+            flex: 0 1 50%;
         }
+    }
+    .dropdown-header {
+        font-size: $font-size-base;
     }
 
     #aboutDropdown + div.dropdown-menu,
     #investorsDropdown + div.dropdown-menu {
         @include media-breakpoint-up(lg) {
-            width: 38rem;
+            width: 30rem;
         }
     }
 
-    #aboutDropdown + div.dropdown-menu {
+    #businessDropdown + div.dropdown-menu {
         @include media-breakpoint-up(lg) {
-            left: -8rem;
+            width: 17rem;
         }
     }
 
     #investorsDropdown + div.dropdown-menu {
         @include media-breakpoint-up(lg) {
-            right: -11rem;
+            right: -11.3rem;
         }
     }
+
+    
 }
 header.expanded {
 

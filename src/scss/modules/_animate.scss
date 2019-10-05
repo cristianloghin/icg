@@ -8,6 +8,11 @@
         transform: translate3d(0, 100px, 0);
     }
 
+    &[data-anim="fade-in-top"] {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+    }
+
     &[data-anim="fade-in-left"] {
         opacity: 0;
         transform: translate3d(-100px, 0, 0);

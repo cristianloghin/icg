@@ -1,7 +1,7 @@
 // SVG maps
 .svg-map {
     
-    path.fill-info {
+    .fill-info {
         fill: map-get($theme-colors, info);
     }
     .fill-secondary {
@@ -60,6 +60,10 @@
         g.delay-6 text,
         g.delay-6 circle {
             transition-delay: 8.25s;
+        }
+        g.delay-8 text,
+        g.delay-8 circle {
+            transition-delay: 9.5s;
         }
     }
     .routes {

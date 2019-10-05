@@ -22,7 +22,7 @@ charts.forEach(function (chart) {
 
     viewport2.addEventListener('scroll', _.throttle(animate, 100));
   } catch (err) {
-    console.error("Animations on scroll fail", err);
+    console.error("Animations on Scroll Error:", err);
   } // Initialize SVG maps (if present)
 
 
@@ -34,6 +34,6 @@ charts.forEach(function (chart) {
       path.setAttribute('stroke-dashoffset', path.getTotalLength());
     });
   } catch (err) {
-    console.error("SVG Maps fail", err);
+    console.error("SVG Maps Error:", err);
   }
 })();
