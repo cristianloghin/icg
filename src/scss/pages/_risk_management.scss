@@ -9,4 +9,220 @@
         
     }
 
+    .framework {
+        display: flex;
+        flex-direction: column;
+
+        font-size: $font-size-sm;
+        font-family: $headings-font-family;
+        line-height: 1.2 * $font-size-sm;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            font-size: $font-size-base;
+            line-height: 1.2 * $font-size-base;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 80%;
+        }
+
+        .sidebar {
+            display: flex;
+            align-items: center;
+            flex: 1 1 20%;
+            padding: .25rem;
+            @include media-breakpoint-up(lg) {
+                padding: 1rem;
+            }
+            
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                border: $border-width solid $gray-400;
+                border-top: none;
+                padding: 0 .5rem;
+
+                @include media-breakpoint-up(lg) {
+
+                    border-top: $border-width solid $gray-400;
+                    border-left: none;
+                    padding: 0 1rem;
+                }
+
+                span {
+                    text-align: center;
+                    @include media-breakpoint-up(lg) {
+                        text-align: left;
+                    }
+                }
+                
+            }
+        }
+
+        .block {
+            flex: 0 1 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 1rem 0;
+        }
+        .box {
+            flex: 0 1 30%;
+
+            div {
+                display: flex;
+                align-content: center;
+                width: 100%;
+                height: 100%;
+                min-height: 4rem;
+
+                align-items: center;
+                justify-content: center;
+                @include border-radius($border-radius);
+
+                padding: .25rem;
+
+                @include media-breakpoint-up(md) {
+                    padding: 1rem;
+                }
+
+                span {
+                    text-align: center;
+                }
+            }
+        }
+        .box-1 {
+            div {
+                background-color: $gray-400;
+            }
+        }
+        .box-2 {
+            div {
+                color: $white;
+                background-color: map-get($theme-colors, dark);
+            }
+        }
+        .box-3 {
+            div {
+                border: $border-width solid $gray-400;
+            }
+        }
+        
+        div[class*=' arrow'] {
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                width: 3rem;
+                position: absolute;
+
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 496'%3E%3Cg%3E%3Cpath fill='none' stroke='%23ced4da' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M24 0v494'/%3E%3C/g%3E%3Cpath fill='none' stroke='%23ced4da' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M24 494 l-12 -12'/%3E%3Cpath fill='none' stroke='%23ced4da' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M24 494 l12 -12'/%3E%3C/svg%3E");
+
+                background-position: center bottom;
+                background-size: 2rem 20rem;
+            }
+        }
+
+        div[class*= '-up-short']:before,
+        div[class*= '-down-short']:after,
+        .arrow-up-normal:before {
+            height: .9rem;
+            left: calc(50% - 1.5rem);
+        }
+
+        .arrow-down-short:after {
+            bottom: -.9rem;
+        }
+
+        .arrow-up-short:before,
+        .arrow-up-normal:before {
+            transform: rotate(180deg);
+        }
+
+        .arrow-up-short:before {
+            top: -.9rem;
+        }
+
+        .arrow-up-normal:before {
+            height: 1.8rem;
+            top: -1.8rem;
+        }
+
+        .arrow-left:before {
+            height: 1.5rem;
+            top: calc(50% - .75rem);
+            left: -1.5rem;
+            transform: rotate(90deg);
+
+            @include media-breakpoint-up(sm) {
+                height: 2rem;
+                top: calc(50% - 1rem);
+                left: -2rem;
+            }
+        }
+
+        .arrow-up-right {
+            &:before {
+                height: 4rem;
+                left: calc(50% - 1.5rem);
+                background-position: center center !important;
+                top: -4rem;
+            }
+            &:after {
+                height: 3rem;
+                transform: rotate(-90deg);
+                left: 50%;
+                top: -5.5rem;
+                @include media-breakpoint-up(sm) {
+                    height: 7rem;
+                    transform-origin: 0;
+                    left: calc(50% + 3.5rem);
+                    top: -6rem;
+                }
+            }
+        }
+
+        .arrow-top-left:before,
+        .arrow-top-right:before {
+            height: 13.5rem;
+            top: -13.5rem;
+            left: calc(50% - 1.5rem);
+            transform: rotate(180deg);
+        }
+
+        .arrow-top-left:after,
+        .arrow-top-right:after {
+            height: 3rem;
+            top: -5.5rem;
+            @include media-breakpoint-up(sm) {
+                height: 7rem;
+                top: -6rem;
+            }
+        }
+
+        .arrow-top-right:after {
+            transform: rotate(-90deg);
+            left: 50%;
+            @include media-breakpoint-up(sm) {
+                transform-origin: 0;
+                left: calc(50% + 3.5rem);
+            }
+        }
+
+        .arrow-top-left:after {
+            transform: rotate(90deg);
+            right: 50%;
+            @include media-breakpoint-up(sm) {
+                transform-origin: right;
+                right: calc(50% + 3.5rem);
+            }
+        }
+    }
 }
