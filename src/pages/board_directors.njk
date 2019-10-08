@@ -1,0 +1,344 @@
+<!-- board_directors.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('board_directors')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="board_directors">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Board of Directors</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="pb-5 border-top container">
+                        <div class="row animate" data-anim="fade-in-bottom">
+                            <div class="col-md-10 offset-md-1">
+                                <p class="lead text-center text-primary pt-5">The Board consists of two executive and four non-executive Directors. Details of the professional and educational backgrounds of each director encompassing the experience and expertise that they bring to the Board are set out below.</p>
+                            </div>
+                        </div>
+                        <div class="row d-none d-sm-flex pt-5 animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                            <div class="col-12 col-lg-10 offset-lg-1">
+                                <ul class="nav nav-tabs justify-content-center" id="directorsTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="home" aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="nonexecutive-tab" data-toggle="tab" href="#nonexecutive" role="tab" aria-controls="nonexecutive" aria-selected="false">Non-Executive</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="executive-tab" data-toggle="tab" href="#executive" role="tab" aria-controls="executive" aria-selected="false">Executive</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="secretary-tab" data-toggle="tab" href="#secretary" role="tab" aria-controls="secretary" aria-selected="false">Secretary</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="tab-content pb-5" id="directorsTabContent">
+                        <div class="container tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5 offset-lg-1 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/John-B-McGuckian.png" class="d-block rounded-circle bg-light" alt="John B. McGuckian portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">John B. McGuckian</h5>
+                                                <p>Chairman<br>BSc (Econ)</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioJBMG" aria-expanded="false" aria-controls="bioJBMG">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioJBMG">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>John B. McGuckian, aged 79, has been a Director for 31 years having been appointed as a non-executive Director in 1988 and Chairman in 2004. He has a wide range of interests, both in Ireland and internationally. He is a Director of Cooneen Textiles Limited. He is a former Director of a number of listed companies and he has previously acted as the Chairman of; the International Fund for Ireland, the Industrial Development Board for Northern Ireland, UTV Media plc (where he was also a member of the Remuneration Committee) and as Senior Pro-Chancellor and Chairman of the Senate of the Queen’s University of Belfast.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/Brian-O-Kelly.png" class="d-block rounded-circle bg-light" alt="Brian O'Kelly portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">Brian O'Kelly</h5>
+                                                <p>Independent Director<br>BBS, FCA</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioBOK" aria-expanded="false" aria-controls="bioBOK">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioBOK">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>Brian O’Kelly, aged 56, has been a Director for 6 years having been appointed to the Board in 2013. Brian is Co-Head of Investment Banking in Goodbody having previously been Managing Director of Goodbody Corporate Finance. He is an executive director of Ganmac Holdings, the parent company of Goodbody. Brian qualified as a Chartered Accountant with KPMG and was subsequently a Director of ABN AMRO Corporate Finance. He is a member of the Listing Committee of the Irish Stock Exchange. Committee Membership: Audit Committee, Nomination Committee, and Remuneration Committee (Chairperson).</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 offset-lg-1 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/John-Sheehan.png" class="d-block rounded-circle bg-light" alt="John Sheehan portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">John Sheehan</h5>
+                                                <p>Independent Director<br>FCA</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioJS" aria-expanded="false" aria-controls="bioJS">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioJS">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>John Sheehan, aged 53, has been a Director for 5 years having been appointed to the Board in 2013. John holds a senior position with Ardagh Group, a leading operator in the global glass and metal packaging sector with operations principally in Europe and North America. John has over 20 years of experience at management level with exposure to international acquisition and development projects. He was formerly Head of Equity Sales at NCB Stockbrokers, now part of Investec Bank, where he spent thirteen years in a range of roles and directly covered various industry sectors including transport and aviation. John qualified as a Chartered Accountant with PwC. Committee Membership: Audit Committee (Chairperson), Remuneration Committee, Nomination Committee.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/Catherine-Duffy.png" class="d-block rounded-circle bg-light" alt="Catherine Duffy portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">Catherine Duffy</h5>
+                                                <p>Independent Director<br>BA LegSC, DipLeg Stds</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioCD" aria-expanded="false" aria-controls="bioCD">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioCD">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>Catherine Duffy, aged 57, has been a Director for 7 years having been appointed to the Board in 2012. Catherine is the Chairman of law firm A&amp;L Goodbody and a Senior Partner in its Banking and Financial Services Department. Catherine is a member of the executive committee of the International Legal Advisory Panel to the Aviation Working Group of Unidroit. She was previously a non-executive Director of Beaumont Hospital and a member of the first Advisory Group to the Irish Maritime Development Office, a government sponsored organisation set up to promote and assist the development of Irish shipping and shipping services. Committee Membership: Audit Committee, Nomination Committee (Chairperson) and Remuneration Committee.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 offset-lg-1 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/Eamonn-Rothwell.png" class="d-block rounded-circle bg-light" alt="Eamonn Rothwell portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">Eamonn Rothwell</h5>
+                                                <p>Chief Executive Officer<br>MBS, FCCA, CFA UK</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioER" aria-expanded="false" aria-controls="bioER">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioER">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>Eamonn Rothwell, aged 63, has been a Director for 32 years having been appointed as a non-executive Director in 1987 and subsequently to the position of Chief Executive Officer in 1992. He is a Director of Interferry European Office A.I.S.B.L. He is a former Director of The United Kingdom Mutual War Risks Association Limited, Interferry Inc and The United Kingdom Mutual Steam Ship Assurance Association (Bermuda) Limited. He is a past executive Director of stockbrokers NCB Group. Prior to that, he worked with Allied Irish Banks plc and Bord Fáilte Eireann (The Irish Tourist Board). Committee Membership: Nomination Committee.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/David-Ledwidge.png" class="d-block rounded-circle bg-light" alt="David Ledwidge portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">David Ledwidge</h5>
+                                                <p>Chief Financial Officer<br>ACA, BSc (Mgmt)</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioDL" aria-expanded="false" aria-controls="bioDL">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioDL">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>David Ledwidge, aged 39, has been a Director for 3 years having been appointed to the Board in 2016. David joined the Group in 2006 from professional services firm Deloitte where he qualified as a chartered accountant. He has held various financial positions within the Group, including Group Risk Accountant, and most recently as Finance Director of Irish Ferries. He was appointed to his current role as Group Chief Financial Officer in May 2015.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 offset-lg-1 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/Thomas-Corcoran.png" class="d-block rounded-circle bg-light" alt="Thomas Corcoran portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">Thomas Corcoran</h5>
+                                                <p>Company Secretary<br>BComm, FCA</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioTC" aria-expanded="false" aria-controls="bioTC">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioTC">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>Thomas Corcoran, aged 54, joined the Company in 1989 from the international professional services firm PwC, where he qualified as a Chartered Accountant. He has held a number of financial positions within the Group and is currently Group Financial Controller. He was appointed Company Secretary in 2001.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container tab-pane fade" id="nonexecutive" role="tabpanel" aria-labelledby="nonexecutive-tab">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5 offset-lg-1 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250" data-anim-anchor="#nonexecutive-tab">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/John-B-McGuckian.png" class="d-block rounded-circle bg-light" alt="John B. McGuckian portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">John B. McGuckian</h5>
+                                                <p>Chairman<br>BSc (Econ)</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioJBMG_2" aria-expanded="false" aria-controls="bioJBMG_2">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioJBMG_2">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>John B. McGuckian, aged 79, has been a Director for 31 years having been appointed as a non-executive Director in 1988 and Chairman in 2004. He has a wide range of interests, both in Ireland and internationally. He is a Director of Cooneen Textiles Limited. He is a former Director of a number of listed companies and he has previously acted as the Chairman of; the International Fund for Ireland, the Industrial Development Board for Northern Ireland, UTV Media plc (where he was also a member of the Remuneration Committee) and as Senior Pro-Chancellor and Chairman of the Senate of the Queen’s University of Belfast.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250" data-anim-anchor="#nonexecutive-tab">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/Brian-O-Kelly.png" class="d-block rounded-circle bg-light" alt="Brian O'Kelly portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">Brian O'Kelly</h5>
+                                                <p>Independent Director<br>BBS, FCA</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioBOK_2" aria-expanded="false" aria-controls="bioBOK_2">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioBOK_2">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>Brian O’Kelly, aged 56, has been a Director for 6 years having been appointed to the Board in 2013. Brian is Co-Head of Investment Banking in Goodbody having previously been Managing Director of Goodbody Corporate Finance. He is an executive director of Ganmac Holdings, the parent company of Goodbody. Brian qualified as a Chartered Accountant with KPMG and was subsequently a Director of ABN AMRO Corporate Finance. He is a member of the Listing Committee of the Irish Stock Exchange. Committee Membership: Audit Committee, Nomination Committee, and Remuneration Committee (Chairperson).</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 offset-lg-1 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250" data-anim-anchor="#nonexecutive-tab">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/John-Sheehan.png" class="d-block rounded-circle bg-light" alt="John Sheehan portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">John Sheehan</h5>
+                                                <p>Independent Director<br>FCA</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioJS_2" aria-expanded="false" aria-controls="bioJS_2">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioJS_2">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>John Sheehan, aged 53, has been a Director for 5 years having been appointed to the Board in 2013. John holds a senior position with Ardagh Group, a leading operator in the global glass and metal packaging sector with operations principally in Europe and North America. John has over 20 years of experience at management level with exposure to international acquisition and development projects. He was formerly Head of Equity Sales at NCB Stockbrokers, now part of Investec Bank, where he spent thirteen years in a range of roles and directly covered various industry sectors including transport and aviation. John qualified as a Chartered Accountant with PwC. Committee Membership: Audit Committee (Chairperson), Remuneration Committee, Nomination Committee.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250" data-anim-anchor="#nonexecutive-tab">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/Catherine-Duffy.png" class="d-block rounded-circle bg-light" alt="Catherine Duffy portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">Catherine Duffy</h5>
+                                                <p>Independent Director<br>BA LegSC, DipLeg Stds</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioCD_2" aria-expanded="false" aria-controls="bioCD_2">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioCD_2">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>Catherine Duffy, aged 57, has been a Director for 7 years having been appointed to the Board in 2012. Catherine is the Chairman of law firm A&amp;L Goodbody and a Senior Partner in its Banking and Financial Services Department. Catherine is a member of the executive committee of the International Legal Advisory Panel to the Aviation Working Group of Unidroit. She was previously a non-executive Director of Beaumont Hospital and a member of the first Advisory Group to the Irish Maritime Development Office, a government sponsored organisation set up to promote and assist the development of Irish shipping and shipping services. Committee Membership: Audit Committee, Nomination Committee (Chairperson) and Remuneration Committee.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container tab-pane fade" id="executive" role="tabpanel" aria-labelledby="executive-tab">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5 offset-lg-1 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250" data-anim-anchor="#executive-tab">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/Eamonn-Rothwell.png" class="d-block rounded-circle bg-light" alt="Eamonn Rothwell portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">Eamonn Rothwell</h5>
+                                                <p>Chief Executive Officer<br>MBS, FCCA, CFA UK</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioER_2" aria-expanded="false" aria-controls="bioER_2">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioER_2">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>Eamonn Rothwell, aged 63, has been a Director for 32 years having been appointed as a non-executive Director in 1987 and subsequently to the position of Chief Executive Officer in 1992. He is a Director of Interferry European Office A.I.S.B.L. He is a former Director of The United Kingdom Mutual War Risks Association Limited, Interferry Inc and The United Kingdom Mutual Steam Ship Assurance Association (Bermuda) Limited. He is a past executive Director of stockbrokers NCB Group. Prior to that, he worked with Allied Irish Banks plc and Bord Fáilte Eireann (The Irish Tourist Board). Committee Membership: Nomination Committee.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250" data-anim-anchor="#executive-tab">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/David-Ledwidge.png" class="d-block rounded-circle bg-light" alt="David Ledwidge portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">David Ledwidge</h5>
+                                                <p>Chief Financial Officer<br>ACA, BSc (Mgmt)</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioDL_2" aria-expanded="false" aria-controls="bioDL_2">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioDL_2">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>David Ledwidge, aged 39, has been a Director for 3 years having been appointed to the Board in 2016. David joined the Group in 2006 from professional services firm Deloitte where he qualified as a chartered accountant. He has held various financial positions within the Group, including Group Risk Accountant, and most recently as Finance Director of Irish Ferries. He was appointed to his current role as Group Chief Financial Officer in May 2015.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container tab-pane fade" id="secretary" role="tabpanel" aria-labelledby="secretary-tab">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5 offset-lg-1 mb-4">
+                                    <div class="profile animate" data-anim="fade-in-bottom" data-anim-delay="250" data-anim-anchor="#secretary-tab">
+                                        <div class="base">
+                                            <div class="portrait">
+                                                <img src="assets/portraits/Thomas-Corcoran.png" class="d-block rounded-circle bg-light" alt="Thomas Corcoran portrait">
+                                            </div>
+                                            <div class="info">
+                                                <h5 class="text-secondary">Thomas Corcoran</h5>
+                                                <p>Company Secretary<br>BComm, FCA</p>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#bioTC_2" aria-expanded="false" aria-controls="bioTC_2">Bio</button>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bioTC_2">
+                                            <div class="card card-body bg-light border-0">
+                                                <small>Thomas Corcoran, aged 54, joined the Company in 1989 from the international professional services firm PwC, where he qualified as a Chartered Accountant. He has held a number of financial positions within the Group and is currently Group Financial Controller. He was appointed Company Secretary in 2001.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

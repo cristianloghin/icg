@@ -3,6 +3,10 @@
 #at_a_glance {
     .banner-background {
         background-image: url('../assets/images/at-a-glance-banner.jpg');
+        background-position-x: calc(50% - 6rem);
+        @include media-breakpoint-up(md) {
+            background-position-x: center;
+        }
     }
 
     .jumbotron {
@@ -15,6 +19,15 @@
 
         &:hover {
             transform: scale(1.2);
+        }
+    }
+
+    section:last-child {
+        img {
+            width: 100%;
+            @include media-breakpoint-up(md) {
+                width: 50%;
+            }
         }
     }
 }

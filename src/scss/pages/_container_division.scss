@@ -3,11 +3,20 @@
 #container_division {
     .banner-background {
         background-image: url('../assets/images/container-banner.jpg');
-        background-position-y: top;
+        background-position-x: calc(50% - 4rem);
+        @include media-breakpoint-up(md) {
+            background-position-x: center;
+        }
     }
 
     .jumbotron {
 
     }
 
+    .svg-map svg {
+        width: 200%;
+        @include media-breakpoint-up(md) {
+            width: 100%;
+        }
+    }
 }

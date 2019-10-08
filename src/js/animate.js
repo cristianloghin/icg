@@ -4,21 +4,30 @@ const Animate = (function () {
 
     const _animOptions = {
         offset: 0,
-        delay: 0
+        delay: 0,
+        anchorId: ''
     }
 
     // private functions
 
     function _set_options(element) {
+
         if (element.dataset.animOffset) {
             _animOptions.offset = Number(element.dataset.animOffset);
         } else {
             _animOptions.offset = 0;
+        
         }
         if (element.dataset.animDelay) {
            _animOptions.delay = Number(element.dataset.animDelay);
         } else {
             _animOptions.delay = 0;
+        }
+
+        if (element.dataset.animAnchor) {
+            _animOptions.anchorId = element.dataset.animAnchor;
+        } else {
+            _animOptions.anchorId = '';
         }
     }
 
@@ -38,13 +47,18 @@ const Animate = (function () {
         const height = window.innerHeight - _animOptions.offset;
 
         if ((top - height) <= 0 && !element.classList.contains('in')) {
-            if (element.dataset.anim != 'play') {
-                element.classList.add('in');
-                element.setAttribute('style', `transition-delay: ${_animOptions.delay / 1000}s`);
-            } else {
+            if( _animOptions.anchorId == '' ) {
                 setTimeout( () => {
                     element.classList.add('in');
                 }, _animOptions.delay);
+            } else {
+                const anchor = document.querySelector(_animOptions.anchorId);
+                const listener = anchor.addEventListener('click', () => {
+                    setTimeout( () => {
+                        element.classList.add('in');
+                        removeEventListener(listener);
+                    }, _animOptions.delay);
+                })
             }
         }
     }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#009C56;}
+	.st3{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g class="st0">
+	<title>Icons/Reliability-Icon</title>
+	<desc>Created with Sketch.</desc>
+	<g class="st1">
+		<path id="Fill-1" class="st2" d="M22,23.4v20.1c0,25.4,26.7,38.2,26.9,38.3l0.6,0.3l0.6-0.3C50.4,81.7,77,68.9,77,43.5V23.4
+			L49.6,18L22,23.4z M74.2,43.4c0,21.4-20.8,33.3-24.7,35.4c-3.9-2-24.7-13.9-24.7-35.4V25.8L49.6,21l24.7,4.8v17.6H74.2z
+			 M47.4,53.5L63,34.6l2.2,1.8L47.4,58l-12-14.4l2.2-1.9L47.4,53.5z"/>
+	</g>
+</g>
+<g>
+	<path class="st3" d="M50,19.8l-26,5v18.9c0,17.2,10,30.2,26,36.1"/>
+	<path class="st3" d="M50,19.8l26,5v18.9c0,17.2-10,30.2-26,36.1"/>
+	<line class="st3" x1="47.3" y1="55.4" x2="63.7" y2="35.5"/>
+	<line class="st3" x1="37" y1="43.3" x2="47.3" y2="55.4"/>
+</g>
+</svg>

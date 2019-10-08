@@ -1,0 +1,22 @@
+// About -> Safety and Environment
+
+#safety_environment {
+    .banner-background {
+        background-image: url('../assets/images/safety-banner.jpg');
+        background-position-x: calc(50% + 4rem);
+        @include media-breakpoint-up(md) {
+            background-position-x: center;
+        }
+    }
+
+    img {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            width: 50%;
+        }
+    }
+
+    .jumbotron {
+
+    }
+}

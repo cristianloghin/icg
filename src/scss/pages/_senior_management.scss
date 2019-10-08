@@ -9,4 +9,68 @@
         
     }
 
+    .profile {
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            // height: 100%;
+        }
+
+        .base {
+            display: flex;
+            flex-direction: column;
+
+            @include media-breakpoint-up(md) {
+                flex-direction: row;
+                padding-bottom: $spacer * 1.5;
+                border-bottom: $border-width solid map-get($theme-colors, light);
+
+                height: 100%;
+            }
+
+            .portrait {
+
+                @include media-breakpoint-up(md) {
+                    order: 2;
+                    flex: 1 0 40%;
+                }
+
+                img {
+                    display: inline-block;
+                    width: 50%;
+                    margin: 0 auto;
+
+                    @include media-breakpoint-up(md) {
+                        width: 100%;
+                    }
+                }
+            }
+            .info {
+                text-align: center;
+                padding: $spacer 0;
+
+                @include media-breakpoint-up(md) {
+                    text-align: left;
+                    flex: 1 0 60%;
+                    padding: 0;
+                    padding-right: $spacer;
+                    display: flex;
+                    flex-direction: column;
+                }
+                button {
+                    @include media-breakpoint-up(md) {
+                        margin-top: auto;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+              
+        .card {
+            @include media-breakpoint-up(md) {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
 }

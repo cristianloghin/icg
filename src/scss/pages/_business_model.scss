@@ -1,0 +1,42 @@
+// About -> At a Glance
+
+#business_model {
+    .banner-background {
+        background-image: url('../assets/images/business-model-banner.jpg');
+    }
+
+    .jumbotron {
+
+    }
+    .animated-icon-lg {
+        width: 50%;
+        margin: auto;
+    }
+
+    .animated-icon-md {
+        width: 50%;
+        margin: auto;
+    }
+    
+    section:first-child .row > div {
+        position: relative;
+        .next {
+            width: 3rem;
+            height: 3rem;
+            margin: auto;
+
+            @include media-breakpoint-up(md) {
+                position: absolute;
+                top: 2.5rem;
+                right: -2rem;
+            }
+
+            span {
+                transform: rotate(180deg);
+                @include media-breakpoint-up(md) {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}   

@@ -3,6 +3,10 @@
 #home {
     .banner-background {
         background-image: url('../assets/images/home-banner.jpg');
+        background-position-x: calc(50% - 4rem);
+        @include media-breakpoint-up(md) {
+            background-position-x: center;
+        }
     }
 
     .jumbotron {

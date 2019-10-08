@@ -1,0 +1,167 @@
+<!-- business_model.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{ header.active('business_model') }}
+    
+    <!-- Content -->
+    <div class="viewport" id="business_model">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center vh-100 py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Our Business Model</h1>
+                                    <p class="lead text-primary">We will create value for our stakeholders by anticipating our customers’ needs and matching their requirements with superior services through constant innovation and the rapid application of technology.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-transparent text-center w-100 position-absolute" style="bottom: 0">
+                        <span class="large-icon down-icon" id="scrollDown"></span>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="container py-5">
+                        <div class="row">
+                            <div class="col-md-5 offset-md-1 col-lg-3 offset-lg-0">
+                                <div class="animated-icon-lg animate" data-anim="play">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('resources-icon') }}
+                                </div>
+                                <div class="animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                    <h4 class="text-secondary text-center my-3 my-lg-4">Our resources</h4>
+                                    <ul class="list-group list-group-flush text-center">
+                                        <li class="list-group-item border-top-0 p-1">Modern Fleet and Infrastructure</li>
+                                        <li class="list-group-item p-1">Longterm Leasehold</li>
+                                        <li class="list-group-item p-1">Experienced staff</li>
+                                        <li class="list-group-item p-1">Strong Financial base</li>
+                                        <li class="list-group-item p-1">Recognised brands</li>
+                                    </ul>
+                                </div>
+                                <div class="next animate" data-anim="fade-in-left" data-anim-delay="1000">
+                                    <span class="large-icon right-icon"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-lg-3 mt-4 mt-md-0">
+                                <div class="animated-icon-lg animate" data-anim="play" data-anim-delay="1500">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('fleet-icon') }}
+                                </div>
+                                <div class="animate" data-anim="fade-in-bottom" data-anim-delay="2000">
+                                    <h4 class="text-secondary text-center my-3 my-lg-4">Our principal activities</h4>
+                                    <ul class="list-group list-group-flush text-center">
+                                        <li class="list-group-item border-top-0 p-1">Passenger and RoRo freight shipping services</li>
+                                        <li class="list-group-item p-1">Ship Chartering Services</li>
+                                        <li class="list-group-item p-1">LoLo shipping Activities</li>
+                                        <li class="list-group-item p-1">Container Terminal activities</li>
+                                    </ul>
+                                </div>
+                                <div class="next d-md-none d-lg-block animate" data-anim="fade-in-left" data-anim-delay="3000">
+                                    <span class="large-icon right-icon"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-5 offset-md-1 col-lg-3 offset-lg-0 mt-4 mt-lg-0">
+                                <div class="animated-icon-lg animate" data-anim="play" data-anim-delay="3500">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('growth-icon') }}
+                                </div>
+                                <div class="animate" data-anim="fade-in-bottom" data-anim-delay="4000">
+                                    <h4 class="text-secondary text-center my-3 my-lg-4">Maximising value through</h4>
+                                    <ul class="list-group list-group-flush text-center">
+                                        <li class="list-group-item border-top-0 p-1">Leading Market Positions</li>
+                                        <li class="list-group-item p-1">Excellent Customer Service</li>
+                                        <li class="list-group-item p-1">Strategically located ports and access</li>
+                                        <li class="list-group-item p-1">Innovation and Technology</li>
+                                        <li class="list-group-item p-1">Increased efficiencies</li>
+                                        <li class="list-group-item p-1">Prudent Financial Management</li>
+                                        <li class="list-group-item p-1">Effective governance and risk management</li>
+                                    </ul>
+                                </div>
+                                <div class="next animate" data-anim="fade-in-left" data-anim-delay="5000">
+                                    <span class="large-icon right-icon"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-lg-3 mt-4 mt-lg-0">
+                                <div class="animated-icon-lg animate" data-anim="play" data-anim-delay="5500">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('values-icon') }}
+                                </div>
+                                <div class="animate" data-anim="fade-in-bottom" data-anim-delay="6000">
+                                    <h4 class="text-secondary text-center my-3 my-lg-4">We will deliver</h4>
+                                    <ul class="list-group list-group-flush text-center">
+                                        <li class="list-group-item border-top-0 p-1">A quality customer experience</li>
+                                        <li class="list-group-item p-1">Strengthened business relationships</li>
+                                        <li class="list-group-item p-1">A safe, healthy and positive working environment</li>
+                                        <li class="list-group-item p-1">Sustained and profitable growth for the benefit of shareholders and staff</li>
+                                        <li class="list-group-item p-1">Less impact on the environment</li>
+                                        <li class="list-group-item p-1">Continued community engagement</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="container pb-5">
+                        <div class="row border-top pt-4 pb-3">
+                            <div class="col-12 animate" data-anim="fade-in-bottom" data-anim-offset="200">
+                                <h4 class="text-secondary text-center mb-3">Our Competitive Advantage – Growth Drivers</h4>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <div class="animated-icon-md animate" data-anim="play" data-anim-offset="200">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('customer-icon') }}
+                                </div>
+                                <h5 class="text-primary text-center animate" data-anim="fade-in-bottom">Customer experience</h5>
+                            </div>
+                             <div class="col-6 col-md-4 col-lg-2">
+                                <div class="animated-icon-md animate" data-anim="play" data-anim-delay="500" data-anim-offset="200">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('location-icon') }}
+                                </div>
+                                <h5 class="text-primary text-center animate" data-anim="fade-in-bottom" data-anim-delay="500">Location</h5>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <div class="animated-icon-md animate" data-anim="play" data-anim-delay="1000" data-anim-offset="200">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('efficiency-icon') }}
+                                </div>
+                                <h5 class="text-primary text-center animate" data-anim="fade-in-bottom" data-anim-delay="1000">Efficiency</h5>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <div class="animated-icon-md animate" data-anim="play" data-anim-delay="1500" data-anim-offset="200">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('cost-icon') }}
+                                </div>
+                                <h5 class="text-primary text-center animate" data-anim="fade-in-bottom" data-anim-delay="1500">Cost effectiveness</h5>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <div class="animated-icon-md animate" data-anim="play" data-anim-delay="2000" data-anim-offset="200">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('reliability-icon') }}
+                                </div>
+                                <h5 class="text-primary text-center animate" data-anim="fade-in-bottom" data-anim-delay="2000">Reliability</h5>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <div class="animated-icon-md animate" data-anim="play" data-anim-delay="2500" data-anim-offset="200">
+                                    {% import 'partials/macro-icons.njk' as svg %}
+                                    {{ svg.icon('leadership-icon') }}
+                                </div>
+                                <h5 class="text-primary text-center animate" data-anim="fade-in-bottom" data-anim-delay="2500">Leadership and management team</h5>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

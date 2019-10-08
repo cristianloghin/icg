@@ -36,6 +36,8 @@ charts.forEach( chart => {
             path.setAttribute('stroke-dashoffset', path.getTotalLength());
         });
     
-    } catch (err) { console.error("SVG Maps Error:", err) }
+    } catch (err) { 
+        console.error("SVG Maps Error:", err);
+    }
     
 })();
