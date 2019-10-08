@@ -1,0 +1,23 @@
+// About -> At a Glance
+
+#strategy {
+    .banner-background {
+        background-image: url('../assets/images/strategy-banner.jpg');
+        background-position-x: calc(50% - 8rem);
+
+        @include media-breakpoint-up(md) {
+            background-position-x: center;
+        }
+    }
+
+    section:first-child img {
+        width: 50%;
+        @include media-breakpoint-up(lg) {
+            width: 75%;
+        }
+    }
+
+    section:nth-child(2) img {
+        width: 100%;
+    }
+}   

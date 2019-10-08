@@ -1,0 +1,97 @@
+<!-- strategy.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{ header.active('strategy') }}
+    
+    <!-- Content -->
+    <div class="viewport" id="strategy">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center vh-100 py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Our Strategy</h1>
+                                    <p class="lead text-primary">Our objective is to achieve continued success in our chosen markets, delivering a safe, reliable, timely, good value and high-quality experience for all our customers in a way that minimises our impact on the environment. We measure our success through the quality of our service, as seen by our customers, which should result in delivering sustained and profitable growth for the benefit of all our stakeholders.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-transparent text-center w-100 position-absolute" style="bottom: 0">
+                        <span class="large-icon down-icon" id="scrollDown"></span>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="container py-5">
+                        <div class="row mb-4">
+                            <div class="col-12 animate" data-anim="fade-in-bottom">
+                                <h3 class="text-secondary text-center">Our Strategic Pillars</h3>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-5 col-lg d-flex flex-column animate" data-anim="fade-in-bottom">
+                                <img src="assets/images/strategic-pillar-1.jpg" alt="..." class="mx-auto rounded-circle mb-4">
+                                <h5 class="text-secondary text-center d-flex align-items-center justify-content-center flex-grow-1">Quality Assets</h5>
+                                <p class="text-center mt-auto">We operate a modern fleet of multi-purpose ferries and LoLo container vessels between the Republic of Ireland and Britain and Continental Europe.</p>
+                            </div>
+                            <div class="col-md-5 col-lg d-flex flex-column animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                <img src="assets/images/strategic-pillar-2.jpg" alt="..." class="mx-auto rounded-circle mt-4 mt-md-0 mb-4">
+                                <h5 class="text-secondary text-center d-flex align-items-center justify-content-center flex-grow-1">People &amp; Culture</h5>
+                                <p class="text-center mt-auto">We ensure that all our people are provided with a high level of training and encourage them to engage with the Group’s continuous improvement philosophy.</p>
+                            </div>
+                            <div class="col-md-5 col-lg d-flex flex-column animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                <img src="assets/images/strategic-pillar-3.jpg" alt="..." class="mx-auto rounded-circle mt-4 mt-lg-0 mb-4">
+                                <h5 class="text-secondary text-center d-flex align-items-center justify-content-center flex-grow-1">Prudent Financial Management</h5>
+                                <p class="text-center mt-auto">We seek investment opportunities which meet our stringent hurdles both in terms of return and risk and promote this policy at all organisational levels.</p>
+                            </div>
+                            <div class="col-md-5 col-lg d-flex flex-column animate" data-anim="fade-in-bottom" data-anim-delay="750">
+                                <img src="assets/images/strategic-pillar-4.jpg" alt="..." class="mx-auto rounded-circle mt-4 mt-lg-0 mb-4">
+                                <h5 class="text-secondary text-center d-flex align-items-center justify-content-center flex-grow-1">Safety</h5>
+                                <p class="text-center mt-auto">We promote and maintain of a strong safety culture across all activities and benefit from the competitive rewards that come from giving safety top priority.</p>
+                            </div>
+                            <div class="col-md-5 col-lg d-flex flex-column animate" data-anim="fade-in-bottom" data-anim-delay="1000">
+                                <img src="assets/images/strategic-pillar-5.jpg" alt="..." class="mx-auto rounded-circle mt-4 mt-lg-0 mb-4">
+                                <h5 class="text-secondary text-center d-flex align-items-center justify-content-center flex-grow-1">Environment</h5>
+                                <p class="text-center mt-auto">We take ongoing action and invest continously in the management and reduction of the environmental impacts of our activities, both on and off-shore.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="container pb-5">
+                        <div class="row border-top pt-5 mb-4">
+                            <div class="col-12 animate" data-anim="fade-in-bottom">
+                                <h3 class="text-secondary text-center">Strategy in Action</h3>
+                            </div>
+                        </div>
+                        <div class="row justify-content-around">
+                            <div class="col-md-4 col-lg-3 d-flex flex-column animate" data-anim="fade-in-bottom">
+                                <img src="assets/images/strategy-in-action-1.jpg" alt="..." class="mx-auto rounded mt-4 mt-lg-0 mb-4">
+                                <h5 class="text-secondary text-center d-flex align-items-center justify-content-center flex-grow-1">W.B. Yeats and refurbishment of Dublin Swift</h5>
+                                <p class="text-center mt-auto">Investment in the W.B. Yeats is key to the Group’s decision to offer increased year round direct freight sailings to the continent. The Dublin Swift has undergone additional works to increase car deck capacity and will re-enter service in March offering faster crossing times compared to conventional ferries.</p>
+                            </div>
+                            <div class="col-md-4 col-lg-3 d-flex flex-column animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                <img src="assets/images/strategy-in-action-2.jpg" alt="..." class="mx-auto rounded mt-4 mt-lg-0 mb-4">
+                                <h5 class="text-secondary text-center d-flex align-items-center justify-content-center flex-grow-1">Investment in Container Terminals</h5>
+                                <p class="text-center mt-auto">In our terminal operations in Dublin we have commissioned two remotely operated rubber tyred gantries on one of our container stacks. Whilst improving the working conditions of the operators this also yields operational efficiencies and improves the safety aspects of terminal operations.</p>
+                            </div>
+                            <div class="col-md-4 col-lg-3 d-flex flex-column animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                <img src="assets/images/strategy-in-action-3.jpg" alt="..." class="mx-auto rounded mt-4 mt-lg-0 mb-4">
+                                <h5 class="text-secondary text-center d-flex align-items-center justify-content-center flex-grow-1">Investment in Marketing</h5>
+                                <p class="text-center mt-auto">We delivered compelling and personalised offers to our customers at relevant times. This approach helped improve our brand awareness and drove increased levels of enquiries to the Irish Ferries website, which generated over 6.1 million visits, and delivered over 85% of bookings transacted in the year.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

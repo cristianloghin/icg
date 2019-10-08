@@ -34,16 +34,19 @@ $border-radius: 4px;
 @import "modules/animate";
 @import "modules/svg_maps";
 
-// Pages
+// Pages -> About
 @import "pages/home";
 @import "pages/at_a_glance";
 @import "pages/business_model";
+@import "pages/strategy";
 @import "pages/safety_environment";
 @import "pages/governance_statement";
 @import "pages/board_directors";
 @import "pages/board_committees";
 @import "pages/senior_management";
 @import "pages/risk_management";
+
+// Pages -> Business
 @import "pages/ferries_division";
 @import "pages/container_division";
 @import "pages/our_fleet";
