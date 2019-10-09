@@ -39,5 +39,14 @@ charts.forEach( chart => {
     } catch (err) { 
         console.error("SVG Maps Error:", err);
     }
-    
+
+    // toggle search button
+
+    const toggleSearch = document.querySelector('#toggleSearch');
+    toggleSearch.addEventListener('click', () => {
+        const searchForm = document.querySelector('#searchForm');
+        searchForm.classList.toggle('show');
+        searchForm.querySelector('input').focus();
+    });
+
 })();

@@ -80,6 +80,40 @@ header {
     .nav-item.dropdown .dropdown-item {
         white-space: normal;
     }
+
+    .search-button {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .navbar-collapse {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+        }
+    }
+
+    #searchForm {
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            display: flex;
+            right: 4rem;
+            width: 29rem;
+            background: $white;
+            margin-top: -4rem;
+
+            transition: margin-top .3s ease-in-out;
+
+            input {
+                flex: 1 0 0;
+            }
+        }
+
+        &.show {
+            margin-top: 0 !important;
+        }
+        
+    }
+
     .dropdown-toggle {
 
         @include media-breakpoint-down(md) {
@@ -164,7 +198,11 @@ header.expanded {
         right: calc(50% - 15px);
         top: calc(100% - 35px);
 
-    }    
+    }
+    
+    #searchForm {
+        margin-top: -8rem;
+    }
 }
 
 header.compact {
@@ -189,5 +227,9 @@ header.compact {
         
        // styles for menu toggle
 
+    }
+
+    #searchForm {
+        margin-top: -6rem;
     }
 }

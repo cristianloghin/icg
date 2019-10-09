@@ -120,7 +120,7 @@ div[class*='animated-icon'] {
         svg g {
             path,
             circle {
-                animation: icon-path 2s ease-in-out forwards;
+                animation: icon-path-in 2s ease-in-out forwards;
             }
         }
         
@@ -140,9 +140,15 @@ div[class*='animated-icon'] {
     }
 }
 
-@keyframes icon-path {
+@keyframes icon-path-in {
     to {
         stroke-dashoffset: 0;
+    }
+}
+
+@keyframes icon-path-out {
+    to {
+        stroke-dashoffset: 250;
     }
 }
 
@@ -157,3 +163,34 @@ div[class*='animated-icon'] {
         stroke-width: 3px;
     }
 }
+
+// Other icons
+
+.icon-toggle #search-icon {
+    fill: none;
+    stroke: map-get($theme-colors, info);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 1;
+    width: 100%;
+    display: block;
+    stroke-width: 4px;
+    g.state-1 {
+        stroke-dasharray: 250;
+        stroke-dashoffset: 250;
+        animation: icon-path-in 1s ease-in-out forwards;
+    }
+    g.state-2 {
+        stroke-dasharray: 250;
+        stroke-dashoffset: 250;
+    }
+}
+
+.icon-toggle.active #search-icon {
+    g.state-1 {
+        animation: icon-path-out 1s ease-in-out forwards;
+    }
+    g.state-2 {
+        animation: icon-path-in 1s ease-in-out forwards;
+    }
+} 
