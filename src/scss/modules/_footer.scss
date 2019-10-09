@@ -1,0 +1,72 @@
+// Footer
+
+footer {
+
+    > div:nth-child(2) {
+        .row > div:first-child,
+        .row > div:last-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row > div:first-child {
+            @include media-breakpoint-up(md) {
+                justify-content: flex-start;
+            }
+        }
+
+        .row > div:last-child {
+            @include media-breakpoint-up(md) {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    > div:last-child {
+        background-image: url('../assets/images/footer-back.jpg');
+        background-size: cover;
+        background-position-y: center;
+        background-blend-mode: multiply;
+
+        background-position-x: calc(50% - 9rem);
+
+        @include media-breakpoint-up(md) {
+            background-position-x: center;
+        }
+
+        .nav {
+            justify-content: center;
+            @include media-breakpoint-up(md) {
+                justify-content: flex-start;
+            }    
+        }
+
+        .nav-item {
+            flex: 1 0 50%;
+            @include media-breakpoint-up(md) {
+                flex: auto 0 0;
+            }
+            &:nth-child(2) a {
+                @include media-breakpoint-up(md) {
+                    padding-left: 0;
+                }
+            }
+            &:last-child a {
+                @include media-breakpoint-up(md) {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        a.navbar-brand,
+        a.nav-link {
+            color: map-get($theme-colors, light);
+        }
+
+        a.nav-link,
+        small {
+            text-shadow: 0 0 5px rgba(0, 0, 0, .2);
+        }
+    }
+}

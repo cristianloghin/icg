@@ -34,9 +34,17 @@ set_header();
 viewport.scroll(_.debounce(set_header, 100));
 
 $('#scrollDown').on('click', () => {
+
     const target = document.querySelector('.content-sections');
     const navbar = document.querySelector('.navbar-nav');
-    const position = offset_top(target) - navbar.offsetHeight;
+
+
+    const rect = target.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    const position = rect.top + scrollTop - navbar.offsetHeight;
+
+    console.log(navbar.offsetHeight);
 
     viewport.scrollTop(position);
 });

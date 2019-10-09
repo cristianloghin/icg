@@ -3,8 +3,11 @@
 #at_a_glance {
     .banner-background {
         background-image: url('../assets/images/at-a-glance-banner.jpg');
-        background-position-x: calc(50% - 6rem);
+        background-position-x: center;
         @include media-breakpoint-up(md) {
+            background-position-x: calc(50% - 7rem);
+        }
+        @include media-breakpoint-up(lg) {
             background-position-x: center;
         }
     }
@@ -29,5 +32,10 @@
                 width: 50%;
             }
         }
+    }
+
+    .animated-icon-md {
+        width: 35%;
+        margin: auto;
     }
 }

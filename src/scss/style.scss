@@ -5,6 +5,8 @@ $headings-font-family:        "Roboto Condensed", -apple-system, BlinkMacSystemF
 $font-weight-normal:          300 !default;
 $enable-responsive-font-sizes: true;
 
+$blue:    #02539A;
+
 $theme-colors: (
     "primary": #02539A,
     "secondary": #009C56,
@@ -21,15 +23,16 @@ $border-radius: 4px;
 
 // Custom styles
 
-@import "layout";
+@import "modules/layout";
 
-@import "typography";
+@import "modules/typography";
 
-@import "header";
+@import "modules/header";
+@import "modules/footer";
 
-@import "charts";
+@import "modules/charts";
 
-@import "icons";
+@import "modules/icons";
 
 @import "modules/animate";
 @import "modules/svg_maps";

@@ -9,49 +9,36 @@
     
     <!-- Content -->
     <div class="viewport" id="home">
-        <div class="banner-background"></div>
+        <div class="banner-background">
+            <div id="homeCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"></div>
+                    <div class="carousel-item"></div>
+                    <div class="carousel-item"></div>
+                    <div class="carousel-item"></div>
+                    <div class="carousel-item"></div>
+                </div>
+            </div>
+        </div>
         <div class="page-content d-flex flex-column">
             <!-- Page Content -->
             <div class="flex-grow-1 content-wrapper">
-                <section class="jumbotron jumbotron-fluid text-light text-center vh-100 py-0 mb-0">
-                    <div class="container d-flex flex-column justify-content-center h-100" id="bannerInfo">
-                        <div class="row">
-                            <div class="col-lg-10 mx-auto">
-                                <h1 class="display-4"><b>We are Ireland’s leading shipping, transport and leisure Group</b></h1>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-8 col-lg-6">
-                                <button class="btn btn-lg btn-dark w-100 mt-3 border-0" id="videoButton">
-                                    <span>A day in the life of ICG</span>
-                                    <span>
-                                        <span class="small d-none d-sm-block">Play Video</span>
-                                        <span></span>
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="col-md-4">
-                                <a class="btn btn-lg btn-dark w-100 mt-3 border-0" href="at_a_glance.html" role="button">More about us</a>
-                            </div>
-                        </div>
+                <section class="jumbotron jumbotron-fluid vh-100 py-0 mb-0">
+                    <div class="bg-transparent text-center">
+                        <span class="large-icon down-icon" id="scrollDown"></span>
                     </div>
-                    <div id="extraInfo">
-                        <div class="bg-transparent text-center">
-                            <span class="large-icon down-icon" id="scrollDown"></span>
-                        </div>
-                        <div class="bg-primary bg-primary text-light py-3">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-md-6 d-flex align-items-center">
-                                        <span class="small-icon news-icon"></span>
-                                        <span class="px-2">The story of our newest ferry W.B. Yeats</span>
-                                        <button type="button" class="btn btn-outline-info btn-sm">Click for video</button>
-                                    </div>
-                                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-end">
-                                        <span class="small-icon stock-icon"></span>
-                                        <span class="px-2">Share Price (ISE): &euro;5.03</span>
-                                        <a href="#" class="btn btn-outline-info btn-sm">More information</a>
-                                    </div>
+                    <div class="bg-primary text-light py-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-6 d-flex align-items-center">
+                                    <span class="small-icon news-icon"></span>
+                                    <span class="px-2">The story of our newest ferry W.B. Yeats</span>
+                                    <button type="button" class="btn btn-outline-info btn-sm">see video</button>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex align-items-center justify-content-end">
+                                    <span class="small-icon stock-icon"></span>
+                                    <span class="px-2">Share Price (ISE): &euro;5.03</span>
+                                    <a href="#" class="btn btn-outline-info btn-sm">more<span class="d-none d-lg-inline"> information</span></a>
                                 </div>
                             </div>
                         </div>
@@ -60,36 +47,44 @@
                 <div class="content-sections bg-white">
                     <section class="container py-5">
                         <div class="row">
-                            <div class="col-12 col-md-4">
-                                <div class="card border-0 h-100 text-center animate" data-anim="fade-in-bottom" data-anim-delay="0">
-                                    <img class="w-25 mx-auto" src="assets/icons/Ferry-icon.svg" class="card-img-top" alt="ferry icon">
-                                    <div class="card-body py-0">
-                                        <p class="lead text-primary"><b>1.5 million</b> passengers carried during 2018</p>
+                            <div class="col-lg-10 offset-lg-1 text-center animate" data-anim="fade-in-bottom" data-anim-offset="200">
+                                <h1 class="text-secondary display-4">We are Ireland’s leading shipping, transport and leisure Group</h1>
+                                <a class="btn btn-outline-secondary mt-3" href="at_a_glance.html" role="button">The Group at a Glance</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="container border-top py-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card border-0 text-center animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                    <div class="animated-icon-md animate" data-anim="play" data-anim-delay="250" data-anim-offset="100">
+                                        {% import 'partials/macro-icons.njk' as svg %}
+                                        {{ svg.icon('ferry-icon') }}
                                     </div>
-                                    <div class="card-footer border-0 bg-transparent p-0">
-                                            <a href="#" class="btn btn-outline-secondary">Ferries Division</a>
+                                    <div class="card-body py-0">
+                                        <p class="lead text-primary">1.5 million passengers carried during 2018</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
-                                <div class="card border-0 h-100 text-center animate" data-anim="fade-in-bottom" data-anim-delay="50">
-                                    <img class="w-25 mx-auto" src="assets/icons/Container-icon.svg" class="card-img-top" alt="container icon">
-                                    <div class="card-body py-0">
-                                        <p class="lead text-primary"><b>Over 300,000</b> containers handled YE2018</p>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card border-0 text-center animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                    <div class="animated-icon-md animate" data-anim="play" data-anim-delay="500" data-anim-offset="100">
+                                        {% import 'partials/macro-icons.njk' as svg %}
+                                        {{ svg.icon('container-icon') }}
                                     </div>
-                                        <div class="card-footer border-0 bg-transparent p-0">
-                                            <a href="#" class="btn btn-outline-secondary">Container Division</a>
+                                    <div class="card-body py-0">
+                                        <p class="lead text-primary">Over 300,000 containers handled YE2018</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
-                                <div class="card border-0 h-100 text-center animate" data-anim="fade-in-bottom" data-anim-delay="100">
-                                    <img class="w-25 mx-auto" src="assets/icons/revenue-icon.svg" class="card-img-top" alt="revenue icon">
-                                    <div class="card-body py-0">
-                                        <p class="lead text-primary">2018 YE Revenue: <b>€330m</b></p>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card border-0 text-center animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                    <div class="animated-icon-md animate" data-anim="play" data-anim-delay="750" data-anim-offset="100">
+                                        {% import 'partials/macro-icons.njk' as svg %}
+                                        {{ svg.icon('revenue-icon') }}
                                     </div>
-                                        <div class="card-footer border-0 bg-transparent p-0">
-                                            <a href="#" class="btn btn-outline-secondary">Financial Highlights</a>
+                                    <div class="card-body py-0">
+                                        <p class="lead text-primary">2018 YE Revenue: €330m</p>
                                     </div>
                                 </div>
                             </div>
@@ -97,20 +92,28 @@
                     </section>
                     <section class="container py-5 border-top">
                         <div class="row">
-                            <div class="col-12 col-lg-10 offset-lg-1">
-                                <div class="card border-0">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-4">
-                                            <img src="assets/images/home-csr.jpg" class="card-img animate" data-anim="fade-in-left" data-anim-delay="0" alt="Ferry bridge at dusk">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body animate" data-anim="fade-in-right" data-anim-delay="0">
-                                                <h5 class="card-title text-secondary">Safety and Environment</h5>
-                                                <p class="card-text mb-0">We are committed to carrying out our business activities in an environmentally friendly and safe manner. We are cognisant of our responsibilities to society and seek to drive environmental efficiency across all our activities.</p>
-                                                <a href="#" class="btn btn-outline-secondary btn-sm mt-4">Read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 animate" data-anim="fade-in-bottom" data-anim-offset="100">
+                                    <img src="assets/images/home-section-1.jpg" class="card-img"  alt="W.B. Yeats ferry">
+                                    <h5 class="card-title text-secondary text-center mt-3">Ferries Division</h5>
+                                    <p class="card-text text-center mb-0">The Ferries Division principal activities include passenger and RoRo freight shipping services and ship chartering activities. The Ferries division owns nine vessels in total and also charters in one vessel as part of its operations.</p>
+                                    <a href="ferries_division.html" class="btn btn-outline-secondary btn-sm mx-auto mt-4">Read more</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 animate" data-anim="fade-in-bottom" data-anim-delay="250" data-anim-offset="100">
+                                    <img src="assets/images/home-section-2.jpg" class="card-img" alt="Dublin Ferryport Terminal at night">
+                                    <h5 class="card-title text-secondary text-center mt-3">Container Division</h5>
+                                    <p class="card-text text-center mb-0">The Container and Terminal Division principal activities include LoLo shipping activities under the Eucon brand and the operation of two container terminals, Dublin Ferryport Terminals and Belfast Container Terminal.</p>
+                                    <a href="container_division.html" class="btn btn-outline-secondary btn-sm mx-auto mt-4">Read more</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 animate" data-anim="fade-in-bottom" data-anim-delay="500" data-anim-offset="100">
+                                    <img src="assets/images/home-section-3.jpg" class="card-img" alt="Ferry bridge at dusk">
+                                    <h5 class="card-title text-secondary text-center mt-3">Safety and Environment</h5>
+                                    <p class="card-text text-center mb-0">We are committed to carrying out our business activities in an environmentally friendly and safe manner. We are cognisant of our responsibilities to society and seek to drive environmental efficiency across all our activities.</p>
+                                    <a href="safety_environment.html" class="btn btn-outline-secondary btn-sm mx-auto mt-4">Read more</a>
                                 </div>
                             </div>
                         </div>
