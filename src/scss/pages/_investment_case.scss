@@ -1,0 +1,29 @@
+// Investors -> Investment Case
+
+#investment_case {
+    .banner-background {
+        background-image: none;
+    }
+
+    #investmentCase {
+        svg > g {
+            transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+            transform: scale3d(.75, .75, .75);
+            transform-origin: center;
+            opacity: 0;
+            
+            @each $delay in (1, 2, 3, 4) {
+                &.delay-#{$delay} {
+                    transition-delay: #{$delay/2}s;
+                }
+            }
+        }
+
+    }
+    #investmentCase.in {
+        svg > g {
+            transform: scale3d(1, 1, 1);
+            opacity: 1;
+        }
+    }
+}

@@ -10,11 +10,7 @@
                             <span class="sr-only">Irish Continental Group (Homepage)</span>
                         </a>
                         <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
-                            <!--span class="navbar-toggler-icon"></span-->
-                            <span>
-                                {% import 'partials/macro-icons.njk' as svg %}
-                                {{ svg.icon('menu-icon') }}
-                            </span>
+                            <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
                     <!-- Main Menu -->
@@ -62,19 +58,19 @@
                                     <div class="d-lg-flex">
                                         <div class="dropdown-menu-col">
                                             <h6 class="dropdown-header">Results Centre</h6>
-                                            <a class="dropdown-item" href="#">Investment Case</a>
-                                            <a class="dropdown-item" href="#">Financial Highlights</a>
-                                            <a class="dropdown-item" href="#">Financial Calendar</a>
-                                            <a class="dropdown-item" href="#">Reports and Presentations</a>
-                                            <a class="dropdown-item" href="#">Regulatory News</a>
+                                            <a class="dropdown-item {%if activePage == 'investment_case' %} active {% endif %}" href="investment_case.html">Investment Case</a>
+                                            <a class="dropdown-item {%if activePage == 'financial_highlights' %} active {% endif %}" href="financial_highlights.html">Financial Highlights</a>
+                                            <a class="dropdown-item {%if activePage == 'financial_calendar' %} active {% endif %}" href="financial_calendar">Financial Calendar</a>
+                                            <a class="dropdown-item {%if activePage == 'reports_presentations' %} active {% endif %}" href="reports_presentations.html">Reports and Presentations</a>
+                                            <a class="dropdown-item {%if activePage == 'regulatory_news' %} active {% endif %}" href="regulatory_news.html">Regulatory News</a>
                                         </div>
                                         <div class="dropdown-menu-col">
                                             <h6 class="dropdown-header">Share Information</h6>
-                                            <a class="dropdown-item" href="#">Share Price</a>
-                                            <a class="dropdown-item" href="#">Dividends</a>
-                                            <a class="dropdown-item" href="#">Significant Holdings</a>
-                                            <a class="dropdown-item" href="#">Shareholder Services</a>
-                                            <a class="dropdown-item" href="#">Analyst Coverage</a>
+                                            <a class="dropdown-item {%if activePage == 'share_price' %} active {% endif %}" href="share_price.html">Share Price</a>
+                                            <a class="dropdown-item {%if activePage == 'dividends' %} active {% endif %}" href="dividends.html">Dividends</a>
+                                            <a class="dropdown-item {%if activePage == 'significant_holdings' %} active {% endif %}" href="significant_holdings.html">Significant Holdings</a>
+                                            <a class="dropdown-item {%if activePage == 'shareholder_services' %} active {% endif %}" href="shareholder_services.html">Shareholder Services</a>
+                                            <a class="dropdown-item {%if activePage == 'analyst_coverage' %} active {% endif %}" href="analyst_coverage.html">Analyst Coverage</a>
                                         </div>
                                     </div>
                                 </div>
@@ -84,10 +80,10 @@
                                 Media and Contacts
                                 </a>
                                 <div class="dropdown-menu bg-light border-0 w-100 mt-0" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Press Releases</a>
-                                <a class="dropdown-item" href="#">Press Contacts</a>
-                                <a class="dropdown-item" href="#">ICG Contacts</a>
-                                <a class="dropdown-item" href="#">Usefull Links</a>
+                                <a class="dropdown-item {%if activePage == 'press_releases' %} active {% endif %}" href="press_releases.html">Press Releases</a>
+                                <a class="dropdown-item {%if activePage == 'press_contacts' %} active {% endif %}" href="press_contacts.html">Press Contacts</a>
+                                <a class="dropdown-item {%if activePage == 'icg_contacts' %} active {% endif %}" href="icg_contacts.html">ICG Contacts</a>
+                                <a class="dropdown-item {%if activePage == 'useful_links' %} active {% endif %}" href="useful_links.html">Useful Links</a>
                                 </div>
                             </li>
                         </ul>
