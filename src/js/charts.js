@@ -126,9 +126,6 @@ const Chart = (function () {
             slice.points = _get_points(index);
             return;
         });
-
-        console.log('Slices', _slices );
-        
     }
 
     // public methods

@@ -1,10 +1,5 @@
 "use strict";
 
-var charts = document.querySelectorAll('.new-chart');
-charts.forEach(function (chart) {
-  Chart.draw(chart);
-});
-
 (function () {
   var viewport2 = document.querySelector('.viewport'); // Initialize Animations (on Scroll)
 
@@ -29,12 +24,22 @@ charts.forEach(function (chart) {
   try {
     var map = document.querySelector('.svg-map');
     var paths = map.querySelectorAll('.borders path, .routes path');
-    Array.from(paths).forEach(function (path) {
+    paths.forEach(function (path) {
       path.setAttribute('stroke-dasharray', path.getTotalLength());
       path.setAttribute('stroke-dashoffset', path.getTotalLength());
     });
   } catch (err) {
     console.error("SVG Maps Error:", err);
+  } // Initialize Charts (if present)
+
+
+  try {
+    var charts = document.querySelectorAll('.chart');
+    charts.forEach(function (chart) {
+      Chart.draw(chart);
+    });
+  } catch (err) {
+    console.error("There are no charts on the page:", err);
   } // toggle search button
 
 

@@ -1,11 +1,5 @@
 "use strict";
 
-const charts = document.querySelectorAll('.new-chart');
-
-charts.forEach( chart => {
-    Chart.draw(chart);
-});
-
 (function () {
 
     const viewport2 = document.querySelector('.viewport');
@@ -31,13 +25,23 @@ charts.forEach( chart => {
         const map = document.querySelector('.svg-map');
         const paths = map.querySelectorAll('.borders path, .routes path');
     
-        Array.from(paths).forEach(path => {
+        paths.forEach(path => {
             path.setAttribute('stroke-dasharray', path.getTotalLength());
             path.setAttribute('stroke-dashoffset', path.getTotalLength());
         });
     
     } catch (err) { 
         console.error("SVG Maps Error:", err);
+    }
+
+    // Initialize Charts (if present)
+    try {
+        const charts = document.querySelectorAll('.chart');
+        charts.forEach( chart => {
+            Chart.draw(chart);
+        });
+    } catch (err) { 
+        console.error("There are no charts on the page:", err);
     }
 
     // toggle search button
