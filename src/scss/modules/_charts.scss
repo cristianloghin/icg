@@ -1,5 +1,18 @@
-
 .chart {
+    path {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    text {
+        font-family: $headings-font-family;
+        font-weight: 300;
+        fill: black;
+        text-anchor: middle;
+    }
+}
+
+
+.chart[data-type="pie"] {
 
     > svg {
         width: 100%;
@@ -10,10 +23,10 @@
             stroke-linejoin: round;
             stroke-width: 30;
 
-            &.secondary {
+            &:first-child {
                 stroke: #009C56;
             }
-            &.info {
+            &:nth-child(2) {
                 stroke: #68ADDF;
                 stroke-opacity: .5;
             }

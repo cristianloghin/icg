@@ -34,6 +34,13 @@
         }
     }
 
+    .chart[data-type="pie"] {
+        margin: 0 auto;
+        @include media-breakpoint-up(lg) {
+            width: 75%;
+        }
+    }
+
     .animated-icon-md {
         width: 35%;
         margin: auto;

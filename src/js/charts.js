@@ -3,35 +3,43 @@
 const Chart = (function () {
 
     const options = {
-        'size'      : 400,
-        'radius'    : 180,
-        'colors'    : ['red', 'blue', 'yellow', 'green']
+        'width'     : 400,
+        'height'    : 400,
+        'radius'    : 180
     }
 
-    // private variables
+    // chart map
 
-    let _values = [];
-    let _total = 0;
-    let _slices = [];
+    let _chart = {
+        'type'   : '',
+        'unit'   : '',
+        'values' : [],
+        'total'  : 0,
+        'max'    : 0,
+        'slices' : [],
+        'bars'   : []
+
+    }
 
     // private methods
+        // get
 
     function _get_slice(value) {
-        return value / _total * 100;
+        return value / _chart.total * 100;
     }
 
     function _get_angle(value) {
-        return value / _total * 360;
+        return value / _chart.total * 360;
     }
     
     function _get_radians(value) {
-        return (value / _total * 360) * ( Math.PI / 180 );
+        return (value / _chart.total * 360) * ( Math.PI / 180 );
     }
     
     function _get_total_radians(index) {
-        let total = _slices[index].radians;
+        let total = _chart.slices[index].radians;
         for (let i = index - 1; i >= 0; i--) {
-            total += _slices[i].radians;
+            total += _chart.slices[i].radians;
         }
         return total;
     }
@@ -39,7 +47,7 @@ const Chart = (function () {
     function _get_points(index) {
         let points = [];
         points.push(_get_start_point(index));
-        if(_slices[index].angle > 180) {
+        if(_chart.slices[index].angle > 180) {
             points.push(_get_mid_point(index));
         }
         points.push(_get_end_point(index));
@@ -51,8 +59,8 @@ const Chart = (function () {
         if (index == 0) {
             point =
             {
-                'x' : options.size - (options.size - 2 * options.radius)/2,
-                'y' : options.size / 2
+                'x' : options.width - (options.width - 2 * options.radius)/2,
+                'y' : options.width / 2
             }
         } else {
             point = _get_end_point(index - 1);
@@ -65,15 +73,15 @@ const Chart = (function () {
         if ( index == 0 ) {
             point = 
             {
-                'x' : (options.size / 2) + (options.radius * Math.cos(Math.PI)),
-                'y' : (options.size / 2) + (options.radius * Math.sin(Math.PI))
+                'x' : (options.width / 2) + (options.radius * Math.cos(Math.PI)),
+                'y' : (options.width / 2) + (options.radius * Math.sin(Math.PI))
             }
         } else {
             const radians = _get_total_radians(index-1) + Math.PI;
             point = 
             {
-                'x' : (options.size / 2) + (options.radius * Math.cos(radians)),
-                'y' : (options.size / 2) + (options.radius * Math.sin(radians))
+                'x' : (options.width / 2) + (options.radius * Math.cos(radians)),
+                'y' : (options.width / 2) + (options.radius * Math.sin(radians))
             }
         }
         return point;
@@ -81,33 +89,50 @@ const Chart = (function () {
 
     function _get_end_point(index) {
         let point = {};
-        if ( index == _slices.length - 1) {
+        if ( index == _chart.slices.length - 1) {
             point =
             {
-                'x' : options.size - (options.size - 2 * options.radius)/2,
-                'y' : options.size / 2
+                'x' : options.width - (options.width - 2 * options.radius)/2,
+                'y' : options.width / 2
             }
         } else {
             const radians = _get_total_radians(index);
             point = 
             {
-                'x' : (options.size / 2) + (options.radius * Math.cos(radians)),
-                'y' : (options.size / 2) + (options.radius * Math.sin(radians))
+                'x' : (options.width / 2) + (options.radius * Math.cos(radians)),
+                'y' : (options.width / 2) + (options.radius * Math.sin(radians))
             }
         }
         return point;
     }
 
+        // set
+    
     function _set_values(string) {
-        _values = string.split(';').map( v => Number(v) )
+        _chart.values = string.split(';').map( val => {
+            let pair = val.split(':');
+            if (pair.length == 1) {
+                pair.push('');
+                pair.reverse();
+            }
+            pair[1] = Number(pair[1]);
+            return pair;
+        });
     }
 
-    function _set_total() {
-        _total = _values.reduce( (t, v) => t += v );
+    function _set_total_max() {
+        const values = _chart.values.map( value => value[1] );
+        // calculate total
+        _chart.total = values.reduce( (total, val) => {
+            return total += Math.abs(val);
+        }, 0);
+        // calculate max
+        _chart.max = Math.max(...values);
     }
 
     function _set_slices() {
-        _slices = _values.map( val => {
+        const values = _chart.values.map( value => value[1] );
+        _chart.slices = values.map( val => {
             return {
                 'value'     : val,
                 'pie'       : _get_slice(val),
@@ -117,34 +142,41 @@ const Chart = (function () {
         });
     }
 
+        // init
+
     function _init( chart ) {
-        
+        _chart.type = chart.dataset.type;
+        _chart.unit = chart.dataset.unit;
         _set_values(chart.dataset.values);
-        _set_total();
+        _set_total_max();
         _set_slices();
-        _slices.forEach( (slice, index) => {
+        _chart.slices.forEach( (slice, index) => {
             slice.points = _get_points(index);
-            return;
         });
     }
 
+    function _trim( value ) {
+        return value.toFixed(2);
+    }
+ 
     // public methods
 
-    function draw(chart) {
+    function insert(chart) {
+
         _init(chart);
         // create SVG none
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        svg.setAttribute("viewBox", `0 0 ${options.size} ${options.size}`);
+        svg.setAttribute("viewBox", `0 0 ${options.width} ${options.height}`);
         svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
         svg.setAttribute("version", "1.1");
 
         let svgContent = "";
-        _slices.forEach( (slice, index) => {
-            svgContent += `<path d="M${slice.points[0].x},${slice.points[0].y} `;
+        _chart.slices.forEach( (slice, index) => {
+            svgContent += `<path d="M${_trim(slice.points[0].x)},${_trim(slice.points[0].y)} `;
             for ( let i = 1; i < slice.points.length; i++) {
-                svgContent += `A ${options.radius} ${options.radius} 0 0 1 ${slice.points[i].x} ${slice.points[i].y} `;
+                svgContent += `A ${options.radius} ${options.radius} 0 0 1 ${_trim(slice.points[i].x)} ${_trim(slice.points[i].y)} `;
             }
-            svgContent += `" fill="none" stroke="${options.colors[index]}" stroke-width="40" opacity=".5" />`;
+            svgContent += `" fill="none" />`;
             return;
         })
         svg.innerHTML = svgContent;
@@ -153,6 +185,6 @@ const Chart = (function () {
 
     // 'module' exports
     return {
-        draw: draw,
+        insert: insert,
     }
 })();

@@ -36,7 +36,7 @@
   try {
     var charts = document.querySelectorAll('.chart');
     charts.forEach(function (chart) {
-      Chart.draw(chart);
+      Chart.insert(chart);
     });
   } catch (err) {
     console.error("There are no charts on the page:", err);

@@ -1,0 +1,79 @@
+<!-- financial_highlights.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('financial_highlights')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="financial_highlights">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Financial Highlights</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <h5>Revenue</h5>
+                                <div class="chart py-3 animate"
+                                    data-anim="play"
+                                    data-anim-delay="0"
+                                    data-type="bars"
+                                    data-values="2018:330.2;2017:335.1;2016:325.4;2015:320.6;2014:290.1"
+                                    data-unit="€m">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <h5>EBITDA</h5>
+                                <div class="chart py-3 animate"
+                                    data-anim="play"
+                                    data-anim-delay="0"
+                                    data-type="bars"
+                                    data-values="2018:45.9;2017:63.9"
+                                    data-unit="€m">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <h5>Adjusted Earnings per Share</h5>
+                                <div class="chart py-3 animate"
+                                    data-anim="play"
+                                    data-anim-delay="0"
+                                    data-type="bars"
+                                    data-values="2018:23.1;2017:31.0"
+                                    data-unit="cent">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <h5>Dividend per Share</h5>
+                                <div class="chart py-3 animate"
+                                    data-anim="play"
+                                    data-anim-delay="0"
+                                    data-type="bars"
+                                    data-values="2018:1.2;2017:-0.6"
+                                    data-unit="cent">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}
