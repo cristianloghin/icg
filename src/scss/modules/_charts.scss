@@ -24,6 +24,10 @@
         stroke: map-get($theme-colors, primary);
     }
 
+    .stroke-thin {
+        stroke: $border-color;
+    }
+
     .fill-0 {
         fill: map-get($theme-colors, secondary);
     }
@@ -39,7 +43,7 @@
             
         }
 
-        .stroke-0 {
+        .stroke-0, .stroke-thin {
             animation: dash 1s ease-in-out forwards;
         }
 
@@ -78,6 +82,34 @@
 
             &.label {
                 text-anchor: end;
+                fill: $text-muted;
+            }
+        }
+    }
+}
+
+.chart[data-type="bars-vertical"] {
+    svg {
+        path {
+            stroke-width: 30;
+
+            &.stroke-thin {
+                stroke-width: 3;
+            }
+
+            &.stroke-1 {
+                stroke: #009C56;
+                opacity: .5;
+            }
+        }
+        text {
+            &.value, &.label, &.unit {
+                font-size: 2rem;
+                text-anchor: middle;
+                transform-origin: center;
+            }
+
+            &.label, &.unit {
                 fill: $text-muted;
             }
         }

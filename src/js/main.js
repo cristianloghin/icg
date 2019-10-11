@@ -36,10 +36,68 @@
 
     // Initialize Charts (if present)
     try {
+        const pageId = document.querySelector('.viewport').id;
+        let options;
+
+        if ( pageId == 'at_a_glance' ) {
+            options = {
+                'viewbox'       :
+                {
+                    'width'     : 600,
+                    'height'    : 400
+                },
+                'barsArea'         : 
+                {
+                    'width'     : 570,
+                    'height'    : 370,
+                    'spacerX'   : 15,
+                    'spacerY'   : 15
+                },
+                'radius'    : 160
+            }
+        }
+
+        if ( pageId == 'investment_case' ) {
+            options = {
+                'viewbox'       :
+                {
+                    'width'     : 600,
+                    'height'    : 400
+                },
+                'barsArea'         : 
+                {
+                    'width'     : 570,
+                    'height'    : 370,
+                    'spacerX'   : 15,
+                    'spacerY'   : 15
+                },
+                'radius'    : 160
+            }
+        }
+
+        if ( pageId == 'financial_highlights' ) {
+            options = {
+                'viewbox'       :
+                {
+                    'width'     : 600,
+                    'height'    : 500
+                },
+                'barsArea'         : 
+                {
+                    'width'     : 570,
+                    'height'    : 300,
+                    'spacerX'   : 15,
+                    'spacerY'   : 100
+                },
+                'radius'    : 160
+            }
+        }
+        
         const charts = document.querySelectorAll('.chart');
         charts.forEach( chart => {
-            Chart.insert(chart);
+            Chart.insert(chart, options);
         });
+
     } catch (err) { 
         console.error("There are no charts on the page:", err);
     }

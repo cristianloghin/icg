@@ -2,21 +2,7 @@
 
 const Chart = (function () {
 
-    const options = {
-        'viewbox'       :
-        {
-            'width'     : 600,
-            'height'    : 400
-        },
-        'barsArea'         : 
-        {
-            'width'     : 570,
-            'height'    : 370,
-            'spacerX'   : 15,
-            'spacerY'   : 15
-        },
-        'radius'    : 160
-    }
+    let options;
 
     // chart map
 
@@ -217,7 +203,7 @@ const Chart = (function () {
                     'xs' : _chart.base.v_x * (index + 1) + options.barsArea.spacerX,
                     'ys' : _chart.base.v_y + options.barsArea.spacerY,
                     'xe' : _chart.base.v_x * (index + 1) + options.barsArea.spacerX,
-                    'ye' : _chart.base.v_y + (bar.size * options.barsArea.height) + options.barsArea.spacerY
+                    'ye' : _chart.base.v_y - (bar.size * options.barsArea.height) + options.barsArea.spacerY
                 },
                 'horizontal' : {
                     'xs' : _chart.base.h_x + options.barsArea.spacerX,
@@ -232,7 +218,7 @@ const Chart = (function () {
                     'xs' : _chart.base.v_x * (index + 1) + options.barsArea.spacerX,
                     'ys' : _chart.base.v_y + options.barsArea.spacerY,
                     'xe' : _chart.base.v_x * (index + 1) + options.barsArea.spacerX,
-                    'ye' : _chart.base.v_y - (bar.size * options.barsArea.height) + options.barsArea.spacerY
+                    'ye' : _chart.base.v_y + (bar.size * options.barsArea.height) + options.barsArea.spacerY
                 },
                 'horizontal' : {
                     'xs' : _chart.base.h_x + options.barsArea.spacerX,
@@ -321,9 +307,37 @@ const Chart = (function () {
         return content;
     }
 
+    // draw vertical bar chart
+
+    function _draw_vertical_bars() {
+        let content = '';
+
+        content += `<text class="unit" x="${options.viewbox.width/2 + options.barsArea.spacerY/2}" y="-20" transform="rotate(270)">${_chart.unit}</text>`;
+        // draw chart max, base and min chart lines
+        content += `<path class="stroke-thin" d="M2 2 L${options.viewbox.width - 2} 2" fill="none" />`;
+        content += `<path class="stroke-thin" d="M2 ${_chart.base.v_y + options.barsArea.spacerY} L${options.viewbox.width - 2} ${_chart.base.v_y + options.barsArea.spacerY}" fill="none" />`;
+
+        _chart.bars.forEach( bar => {
+
+            const xs = Math.floor(bar.points.vertical.xs);
+            const ys = Math.floor(bar.points.vertical.ys);
+            const xe = Math.floor(bar.points.vertical.xe);
+            const ye = Math.floor(bar.points.vertical.ye);
+            
+            content += `<text class="value" x="${xs}" y="${ye - 30}">${bar.value}</text>`;
+            content += `<text class="label" x="${xs}" y="${ys + 60}">${bar.label}</text>`;
+            
+            content += `<path class="stroke-1" d="M${xs} ${ys} L${xe} ${ye}" fill="none" />`;
+        });
+
+        return content;
+    }
+
     // public methods
 
-    function insert(chart) {
+    function insert(chart, optionsMap) {
+
+        options = optionsMap;
 
         _init(chart);
         // create SVG node
@@ -341,6 +355,10 @@ const Chart = (function () {
             svgContent = _draw_stat();
         }
 
+        if (_chart.type == 'bars-vertical') {
+            svgContent = _draw_vertical_bars();
+        }
+
         svg.innerHTML = svgContent;
         chart.appendChild(svg);
 
@@ -354,25 +372,6 @@ const Chart = (function () {
 
     // 'module' exports
     return {
-        insert: insert,
+        insert: insert   
     }
 })();
-
-/*
-svgContent += `
-            <text class="total" transform="matrix(1 0 0 1 190 200), rotate(90)">€${totalVal}m</text>
-            <text class="label_1" transform="matrix(1 0 0 1 20 360), rotate(90)">${values[0]}%</text>
-            <text class="label_2" transform="matrix(1 0 0 1 360 40), rotate(90)">${values[1]}%</text>`;
-
-        svgContent += "</svg>";
-        svg.innerHTML = svgContent;
-        chart.appendChild(svg);
-
-        const paths = svg.querySelectorAll('path');
-        
-        paths.forEach( path => {
-            path.setAttribute('stroke-dasharray', path.getTotalLength());
-            path.setAttribute('stroke-dashoffset', path.getTotalLength());
-        });
-
-        */
