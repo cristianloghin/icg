@@ -150,6 +150,12 @@ header {
         }
     }
 
+    #mediaDropdown + div.dropdown-menu {
+        @include media-breakpoint-up(lg) {
+            width: 17rem;
+        }
+    }
+
     #investorsDropdown + div.dropdown-menu {
         @include media-breakpoint-up(lg) {
             right: -11.3rem;

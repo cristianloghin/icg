@@ -1,0 +1,95 @@
+<!-- icg_contacts.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('icg_contacts')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="icg_contacts">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">ICG Contacts and Useful Links</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">                        
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 mb-4 animate" data-anim="fade-in-bottom">
+                                <p class="lead text-center text-primary">Thank you for visiting the Irish Continental Group Web pages. If you require further information about the Group or any of the Group companies, please use the contact details below.</p>
+                            </div>
+                            <div class="col-lg-3 offset-1 animate" data-anim="fade-in-left" data-anim-delay="250">
+                                <p>Irish Continental Group plc<br>Ferryport, Alexandra Road<br>Dublin 1<br>D01W2F5<br>Ireland</p>
+                                <div class="d-flex align-items-center">
+                                    <span class="small-icon phone-icon mr-2"></span>
+                                    <a href="tel:+35316075700">+353 1 607 5700</a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="small-icon email-icon mr-2"></span>
+                                    <a href="mailto:info@icg.ie">info@icg.ie</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 animate" data-anim="fade-in-right" data-anim-delay="500">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9265.803720838316!2d-6.206015317584799!3d53.35085186234908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e99c61189a1%3A0x855917d1c1c522ce!2sIrish+Ferries+%26+Irish+Continental+Group+(ICG)+plc.!5e0!3m2!1sen!2sie!4v1561126443898!5m2!1sen!2sie" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="py-5 container border-top">
+                        <div class="row animate" data-anim="fade-in-bottom">
+                            <div class="col-lg-10 offset-lg-1 mb-4">
+                                <h3 class="text-secondary text-center">Useful Links</h3>
+                            </div>
+                        </div>
+                        <div class="row animate" data-anim="fade-in-bottom">
+                            <div class="col-lg-5 offset-lg-1">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.belfast-harbour.co.uk/">Belfast Harbour</a>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.cilt.ie/">Chartered Institute of Logistics &amp; Transport Ireland</a>
+                            </div>
+                            <div class="col-lg-5 offset-lg-1 mt-4">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.port-cherbourg.com/">Cherbourg Port</a>
+                            </div>
+                            <div class="col-lg-5 mt-4">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.transport.ie/">Department of Transport, Tourism &amp; Sport</a>
+                            </div>
+                            <div class="col-lg-5 offset-lg-1 mt-4">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.dublinport.ie/">Dublin Port</a>
+                            </div>
+                            <div class="col-lg-5 mt-4">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.holyheadport.com/">Holyhead Port</a>
+                            </div>
+                            <div class="col-lg-5 offset-lg-1 mt-4">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.imdo.ie/">Irish Maritime Development Office</a>
+                            </div>
+                            <div class="col-lg-5 mt-4">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.marine.ie/">Marine Institute</a>
+                            </div>
+                            <div class="col-lg-5 offset-lg-1 mt-4">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.mhpa.co.uk/">Milford Haven Port Authority</a>
+                            </div>
+                            <div class="col-lg-5 mt-4">
+                                <a class="btn btn-outline-secondary d-flex justify-content-center h-100 align-items-center" role="button" target="_blank" href="http://www.portofcork.ie/">Port of Cork</a>
+                            </div>  
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

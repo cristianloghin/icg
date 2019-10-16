@@ -1,0 +1,42 @@
+<!-- regulatory_news.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('regulatory_news')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="regulatory_news">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Regulatory News</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">                        
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-12 animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                <iframe src="https://otp.investis.com/clients/uk/icg2/rns/regulatory-news.aspx?culture=en-GB" id="filters-iframe" frameborder="0" scrolling="no" style="width: 100%; height: 724px"></iframe>
+                            </div>   
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

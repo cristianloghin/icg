@@ -1,0 +1,37 @@
+// Investors -> Dividends
+
+#dividends {
+    .banner-background {
+        background-image: none;
+    }
+
+    text {
+        transition-delay: 2s; 
+    }
+
+    path.stroke-1 {
+        stroke-width: 5;
+    }
+
+    .in path.stroke-1 {
+        animation-delay: 1.5s;
+    }
+
+    @for $i from 0 through 8 {
+
+        
+
+        .circle-#{$i} {
+            fill: map-get($theme-colors, secondary);
+            transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+            transform: scale(.5);
+            opacity: 0;
+            transition-delay: #{.3 * $i}s;
+        }
+
+        .in .circle-#{$i} {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}

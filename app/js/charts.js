@@ -350,6 +350,41 @@ var Chart = function () {
     });
 
     return content;
+  } // draw line chart
+
+
+  function _draw_line() {
+    var content = '';
+    content += "<text class=\"unit\" x=\"".concat(options.viewbox.width / 2 + options.barsArea.spacerY / 2, "\" y=\"-140\" transform=\"rotate(270)\">").concat(_chart.unit, "</text>"); // draw chart max, base and min chart lines
+
+    content += "<path class=\"stroke-thin\" d=\"M2 ".concat(_chart.base.v_y + options.barsArea.spacerY, " L").concat(options.viewbox.width - 2, " ").concat(_chart.base.v_y + options.barsArea.spacerY, "\" fill=\"none\" />");
+
+    _chart.bars.forEach(function (bar, index) {
+      var xs = Math.floor(bar.points.vertical.xs);
+      var ys = Math.floor(bar.points.vertical.ys);
+      var xe = Math.floor(bar.points.vertical.xe);
+      var ye = Math.floor(bar.points.vertical.ye);
+
+      if (index == 0) {
+        content += "<path class=\"stroke-1\" d=\"M".concat(xe, " ").concat(ye);
+      } else {
+        content += "L".concat(xe, " ").concat(ye);
+      }
+    });
+
+    content += "\" fill=\"none\" />";
+
+    _chart.bars.forEach(function (bar, index) {
+      var xs = Math.floor(bar.points.vertical.xs);
+      var ys = Math.floor(bar.points.vertical.ys);
+      var xe = Math.floor(bar.points.vertical.xe);
+      var ye = Math.floor(bar.points.vertical.ye);
+      content += "<text class=\"value\" x=\"".concat(xs, "\" y=\"").concat(ye - 20, "\">").concat(bar.value, "</text>");
+      content += "<text class=\"label\" x=\"".concat(xs, "\" y=\"").concat(ys + 20, "\">").concat(bar.label, "</text>");
+      content += "<circle class=\"circle-".concat(index, "\" cx=").concat(xe, " cy=").concat(ye, " r=\"7\" style=\"transform-origin:").concat(xe, "px ").concat(ye, "px\" />");
+    });
+
+    return content;
   } // public methods
 
 
@@ -375,6 +410,10 @@ var Chart = function () {
 
     if (_chart.type == 'bars-vertical') {
       svgContent = _draw_vertical_bars();
+    }
+
+    if (_chart.type == 'line') {
+      svgContent = _draw_line();
     }
 
     svg.innerHTML = svgContent;

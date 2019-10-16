@@ -1,0 +1,126 @@
+<!-- dividends.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('dividends')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="dividends">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Dividends</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">                        
+                    <section class="pb-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <div class="chart animate"
+                                    data-anim="play"
+                                    data-anim-delay="0" 
+                                    data-type="line"
+                                    data-values="2010:10.0;2011:10.0;2012:10.0;2013:10.0;2014:10.5;2015:11.025;2016:11.580;2017:12.16;2018:12.77"
+                                    data-unit="cent">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 offset-lg-2 animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0 text-secondary w-25">Year</th>
+                                            <th class="border-top-0 text-right text-secondary">Interim (paid)(Cent)</th>
+                                            <th class="border-top-0 text-right text-secondary">Final (paid)(Cent)</th>
+                                            <th class="border-top-0 text-right text-secondary">Total (Cent)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2019</td>
+                                            <td class="text-right">4.42 (Oct 19)²</td>
+                                            <td class="text-right">-</td>
+                                            <td class="text-right">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018</td>
+                                            <td class="text-right">4.21 (Oct 18)²</td>
+                                            <td class="text-right">8.56 (June 19)²</td>
+                                            <td class="text-right">12.77</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2017</td>
+                                            <td class="text-right">4.01 (Oct 17)²</td>
+                                            <td class="text-right">8.15 (June 18)²</td>
+                                            <td class="text-right">12.16</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016</td>
+                                            <td class="text-right">3.820 (Oct 16)²</td>
+                                            <td class="text-right">7.760 (June 17)²</td>
+                                            <td class="text-right">11.580</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2015</td>
+                                            <td class="text-right">3.638 (Oct 15)²</td>
+                                            <td class="text-right">7.387 (Jun 16)²</td>
+                                            <td class="text-right">11.025</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2014</td>
+                                            <td class="text-right">3.465 (Oct 14)²</td>
+                                            <td class="text-right">7.035 (Jun 15)²</td>
+                                            <td class="text-right">10.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013*</td>
+                                            <td class="text-right">3.3 (Oct 13)²</td>
+                                            <td class="text-right">6.7 (Jun 14)²</td>
+                                            <td class="text-right">10.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012*</td>
+                                            <td class="text-right">3.3 (Oct 12)²</td>
+                                            <td class="text-right">6.7 (Jun 13)²</td>
+                                            <td class="text-right">10.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011*</td>
+                                            <td class="text-right">3.3 (Sep 11)²</td>
+                                            <td class="text-right">6.7(Jun 12)²</td>
+                                            <td class="text-right">10.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010*</td>
+                                            <td class="text-right">-</td>
+                                            <td class="text-right">10.0 (Jun 11)²</td>
+                                            <td class="text-right">10.0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="small">* The Company implemented a 10-for-1 share split on 9 June 2014 and the historical information is reflected on a split-adjusted basis.<br>
+                                ¹ These have been paid as a premium on the redemption of redeemable shares. For further information on redemption, see ICG Unit.<br>
+                                ² These have been paid as a dividend and are subject to Irish dividend withholding taxes.</p>
+                                <button type="button" class="btn btn-outline-secondary mx-auto mt-4 d-block">Load more</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

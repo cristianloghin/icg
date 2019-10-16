@@ -10,3 +10,12 @@ p.lead {
 b, strong {
     font-weight: 700;
 }
+
+.nav-tabs {
+    .nav-link {
+        color: $text-muted;
+    }
+    .nav-link.active {
+        color: $black;
+    }
+} 

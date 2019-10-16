@@ -1,0 +1,125 @@
+<!-- analyst_coverage.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('analyst_coverage')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="analyst_coverage">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Analyst Coverage</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">                        
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                <p class="lead text-center text-primary">The following firms provide analyst coverage on Irish Continental Group:</p>
+                            </div>   
+                        </div>
+                        <div class="row mt-4">   
+                            <div class="col-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">Investec Stockbrokers</h5>
+                                        (Joint Broker to the Company)
+                                    </div>
+                                    <div class="card-body">
+                                        <span class="text-secondary">Analyst</span><br>
+                                        Gerard Moore<br><br>
+                                        <span class="text-secondary">Contact Details</span><br>
+                                        The Harcourt Building<br>
+                                        Harcourt Street<br>
+                                        Dublin 2<br>
+                                        Ireland
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+35314210463">+353 1 421 0463</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:gerard.moore@investec.ie">gerard.moore@investec.ie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">Goodbody Stockbrokers</h5>
+                                        (Joint Broker to the Company)
+                                    </div>
+                                    <div class="card-body">
+                                        <span class="text-secondary">Analyst</span><br>
+                                        Gerry Hennigan<br><br>
+                                        <span class="text-secondary">Contact Details</span><br>
+                                        Ballsbridge Park<br>
+                                        Ballsbridge<br>
+                                        Dublin 4<br>
+                                        Ireland
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+35316410498">+353 1 641 0498</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:gerry.f.hennigan@goodbody.ie">gerry.f.hennigan@goodbody.ie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="750">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">Davy Stockbrokers</h5>
+                                        &nbsp;
+                                    </div>
+                                    <div class="card-body">
+                                        <span class="text-secondary">Analyst</span><br>
+                                        Stephen Furlong<br><br>
+                                        <span class="text-secondary">Contact Details</span><br>
+                                        Davy House<br>
+                                        49 Dawson Street<br>
+                                        Dublin 2<br>
+                                        Ireland
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+35316148997">+353 1 614 8997</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:research@davy.ie">research@davy.ie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

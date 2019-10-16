@@ -92,6 +92,42 @@
                 'radius'    : 160
             }
         }
+
+        if ( pageId == 'significant_holdings' ) {
+            options = {
+                'viewbox'       :
+                {
+                    'width'     : 600,
+                    'height'    : 400
+                },
+                'barsArea'         : 
+                {
+                    'width'     : 570,
+                    'height'    : 370,
+                    'spacerX'   : 15,
+                    'spacerY'   : 15
+                },
+                'radius'    : 160
+            }
+        }
+
+        if ( pageId == 'dividends' ) {
+            options = {
+                'viewbox'       :
+                {
+                    'width'     : 600,
+                    'height'    : 300
+                },
+                'barsArea'         : 
+                {
+                    'width'     : 570,
+                    'height'    : 100,
+                    'spacerX'   : 15,
+                    'spacerY'   : 100
+                },
+                'radius'    : 160
+            }
+        }
         
         const charts = document.querySelectorAll('.chart');
         charts.forEach( chart => {

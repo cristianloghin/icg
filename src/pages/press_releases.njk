@@ -1,0 +1,220 @@
+<!-- press_releases.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('press_releases')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="press_releases">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100 pb-5">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Press Releases and Contacts</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">                        
+                    <section class="py-5 container border-top">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card border-0 text-center animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                    <div class="animated-icon-md animate" data-anim="play" data-anim-delay="250" data-anim-offset="100">
+                                        {% import 'partials/macro-icons.njk' as svg %}
+                                        {{ svg.icon('megaphone-icon') }}
+                                    </div>
+                                    <div class="card-body py-0">
+                                        <p class="lead text-primary">ICG Announcements</p>
+                                        <a href="regulatory_news.html" class="btn btn-outline-secondary btn-sm mx-auto mt-0">Go to page</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card border-0 text-center animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                    <div class="animated-icon-md animate" data-anim="play" data-anim-delay="500" data-anim-offset="100">
+                                        {% import 'partials/macro-icons.njk' as svg %}
+                                        {{ svg.icon('ferry-2-icon') }}
+                                    </div>
+                                    <div class="card-body py-0">
+                                        <p class="lead text-primary">Irish Ferries News</p>
+                                        <a href="http://www.irishferries.com/ie-en/news-listing/" target="_blank" class="btn btn-outline-secondary btn-sm mx-auto mt-0">Go to website</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card border-0 text-center animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                    <div class="animated-icon-md animate" data-anim="play" data-anim-delay="750" data-anim-offset="100">
+                                        {% import 'partials/macro-icons.njk' as svg %}
+                                        {{ svg.icon('shipping-icon') }}
+                                    </div>
+                                    <div class="card-body py-0">
+                                        <p class="lead text-primary">Eucon Press Releases</p>
+                                        <a href="https://www.eucon.nl/news/" target="_blank" class="btn btn-outline-secondary btn-sm mx-auto mt-0">Go to website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="py-5 container border-top">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 mb-4">
+                                <h3 class="text-secondary text-center">Press Contacts</h3>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">ICG Dublin</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        Q4 Public Relations<br>
+                                        88 St. Stephen’s Green<br>
+                                        Dublin 2<br>
+                                        D02 DY04
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+35314751444">+353 1 475 1444</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:press@q4pr.ie">press@q4pr.ie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">Irish Ferries</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        Dublin Head Office &amp; Customer Support<br>
+                                        Irish Ferries<br>
+                                        P.O. Box 19<br>
+                                        Alexandra Road<br>
+                                        Dublin 1
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+35316075700">+353 1 607 5700</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:info@irishferries.com">info@irishferries.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">Dublin Ferryport Terminals (DFT)</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        T/A Dublin Ferryport Terminals (DFT)<br>
+                                        Registered in Dublin, Ireland, no. 9344<br>
+                                        Registered Office - Ferryport, Alexandra Road, Dublin 1
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+35316075700">+353 1 607 5700</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:info@dft.ie">info@dft.ie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">Irish Ferries Freight Centre</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        Terminal Road South<br>
+                                        Ferryport. Dublin 1<br>
+                                        Ireland
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+35316075545">+353 1 607 5545</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:dublinfreight@irishferries.com">dublinfreight@irishferries.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">Eucon Dublin</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        Eucon Shipping &amp; Transport Ltd<br>
+                                        Irish Ferries head office, Breakwater Road South<br>
+                                        Ferryport, Alexandra Road<br>
+                                        Dublin 1<br>
+                                        Ireland
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+35316075555">+353 1 607 5555</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:info@eucon.ie">info@eucon.ie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-lg-4">
+                                <div class="card h-100 animate" data-anim="fade-in-bottom" data-anim-delay="500">
+                                    <div class="card-header bg-transparent">
+                                        <h5 class="text-secondary mb-0">Eucon Rotterdam</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        Reeweg 35<br>
+                                        Port number 2750<br>
+                                        3089 KM Rotterdam<br>
+                                        The Netherlands
+                                    </div>
+                                    <div class="card-footer bg-transparent mt-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon phone-icon mr-2"></span>
+                                            <a href="tel:+31104283700">+31 10 428 3700</a>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="small-icon email-icon mr-2"></span>
+                                            <a href="mailto:info@eucon.nl">info@eucon.nl</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

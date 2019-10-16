@@ -15,6 +15,20 @@ $theme-colors: (
     "danger": #ff5100
 );
 
+$chart-colors: (
+    "color-1": map-get($theme-colors, secondary),
+    "color-2": map-get($theme-colors, info),
+    "color-3": map-get($theme-colors, primary),
+    "color-4": #ff5100,
+    "color-5": rgb(236, 193, 0),
+    "color-6": rgb(139, 199, 0),
+    "color-7": rgb(113, 49, 155),
+    "color-8": #0F0,
+    "color-9": #CCA,
+    "color-10": #A23,
+    "color-11": #5F0
+);
+
 $border-radius: 4px;
 
 // Bootstrap Sass Imports
@@ -57,3 +71,15 @@ $border-radius: 4px;
 // Pages -> Investors
 @import "pages/investment_case";
 @import "pages/financial_highlights";
+@import "pages/financial_calendar";
+@import "pages/reports_presentations";
+@import "pages/regulatory_news";
+@import "pages/share_price";
+@import "pages/dividends";
+@import "pages/significant_holdings";
+@import "pages/shareholder_services";
+@import "pages/analyst_coverage";
+
+// Pages -> Media
+@import "pages/press_releases";
+@import "pages/icg_contacts";

@@ -61,7 +61,7 @@
             stroke-width: 30;
 
             &.stroke-0 {
-                stroke: #68ADDF;
+                stroke: map-get($theme-colors, info);
                 stroke-opacity: .5;
             }
 
@@ -98,13 +98,41 @@
             }
 
             &.stroke-1 {
-                stroke: #009C56;
-                opacity: .5;
+                stroke: map-get($theme-colors, info);
+                opacity: .75;
             }
         }
         text {
             &.value, &.label, &.unit {
                 font-size: 2rem;
+                text-anchor: middle;
+                transform-origin: center;
+            }
+
+            &.label, &.unit {
+                fill: $text-muted;
+            }
+        }
+    }
+}
+
+.chart[data-type="line"] {
+    svg {
+        path {
+            stroke-width: 10;
+
+            &.stroke-thin {
+                stroke-width: 1;
+            }
+
+            &.stroke-1 {
+                stroke: map-get($theme-colors, info);
+                opacity: .75;
+            }
+        }
+        text {
+            &.value, &.label, &.unit {
+                font-size: .75rem;
                 text-anchor: middle;
                 transform-origin: center;
             }

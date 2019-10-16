@@ -333,6 +333,48 @@ const Chart = (function () {
         return content;
     }
 
+    // draw line chart
+
+    function _draw_line() {
+        let content = '';
+
+        content += `<text class="unit" x="${options.viewbox.width/2 + options.barsArea.spacerY/2}" y="-140" transform="rotate(270)">${_chart.unit}</text>`;
+        // draw chart max, base and min chart lines
+        content += `<path class="stroke-thin" d="M2 ${_chart.base.v_y + options.barsArea.spacerY} L${options.viewbox.width - 2} ${_chart.base.v_y + options.barsArea.spacerY}" fill="none" />`;
+
+        
+        _chart.bars.forEach( (bar, index) => {
+
+            const xs = Math.floor(bar.points.vertical.xs);
+            const ys = Math.floor(bar.points.vertical.ys);
+            const xe = Math.floor(bar.points.vertical.xe);
+            const ye = Math.floor(bar.points.vertical.ye);
+
+            if (index == 0) {
+                content += `<path class="stroke-1" d="M${xe} ${ye}`;
+            } else {
+                content += `L${xe} ${ye}`;
+            }
+        });
+
+        content += `" fill="none" />`;
+
+        _chart.bars.forEach( (bar, index) => {
+
+            const xs = Math.floor(bar.points.vertical.xs);
+            const ys = Math.floor(bar.points.vertical.ys);
+            const xe = Math.floor(bar.points.vertical.xe);
+            const ye = Math.floor(bar.points.vertical.ye);
+            
+            content += `<text class="value" x="${xs}" y="${ye - 20}">${bar.value}</text>`;
+            content += `<text class="label" x="${xs}" y="${ys + 20}">${bar.label}</text>`;
+            
+            content += `<circle class="circle-${index}" cx=${xe} cy=${ye} r="7" style="transform-origin:${xe}px ${ye}px" />`;
+        });
+
+        return content;
+    }
+
     // public methods
 
     function insert(chart, optionsMap) {
@@ -357,6 +399,10 @@ const Chart = (function () {
 
         if (_chart.type == 'bars-vertical') {
             svgContent = _draw_vertical_bars();
+        }
+
+        if (_chart.type == 'line') {
+            svgContent = _draw_line();
         }
 
         svg.innerHTML = svgContent;

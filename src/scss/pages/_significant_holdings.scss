@@ -1,0 +1,35 @@
+// Investors -> Significant Holdings
+
+#significant_holdings {
+    .banner-background {
+        background-image: none;
+    }
+
+
+    svg text {
+        opacity: 0 !important;
+    }
+
+    @each $opacity in (50, 75, 100) {
+        @each $color, $value in $chart-colors {
+            .dot-#{$color}-#{$opacity}:before {
+                background-color: $value;
+                opacity: $opacity / 100;
+            }
+        }
+    }
+
+    @for $i from 0 through 6 {
+
+        .stroke-#{$i} {
+            stroke: map-get($chart-colors, color-#{$i+1});
+            stroke-opacity: .75;
+            
+        }
+
+        .in .stroke-#{$i} {
+            animation: dash 1s ease-in-out forwards;
+            animation-delay: #{.9 * $i}s;
+        }
+    }
+}
