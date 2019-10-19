@@ -24,12 +24,233 @@
                         </div>
                     </div>
                 </section>
-                <div class="content-sections bg-white">                        
+                <div class="content-sections bg-white">
                     <section class="py-5 container border-top">
                         <div class="row">
-                            <div class="col-12 animate" data-anim="fade-in-bottom" data-anim-delay="0">
-                                <iframe src="https://otp.investis.com/clients/uk/icg2/rns/regulatory-news.aspx?culture=en-GB" id="filters-iframe" frameborder="0" scrolling="no" style="width: 100%; height: 724px"></iframe>
-                            </div>   
+                            <div class="col-lg-10 offset-lg-1 animate" data-anim="fade-in-bottom" data-anim-delay="0">
+                                <button class="btn btn-outline-secondary mx-auto" type="button" data-toggle="collapse" data-target="#filterNews" aria-expanded="false" aria-controls="filterNews">
+                                    <span>Show</span>
+                                    <span>Hide</span>
+                                    &nbsp;Filters
+                                    <span class="small-icon expand-icon ml-2">
+                                        {% import 'partials/macro-icons.njk' as svg %}
+                                        {{ svg.icon('expand-icon') }}
+                                    </span>
+                                </button>
+                                <div class="collapse mt-4" id="filterNews">
+                                    <p class="mb-3 pb-3 border-bottom">Search Irish Continental Group's announcements, explore all regulatory news, or choose from the below categories.</p>
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-lg-6 pr-lg-5">
+                                                <div class="form-group">
+                                                    <label for="searchFor">Search for:</label>
+                                                    <input type="email" class="form-control" id="searchFor" aria-describedby="searchFor" placeholder="Enter search term...">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="searchFrom">from:</label>
+                                                    <select class="form-control" id="searchFrom">
+                                                        <option>Title Only</option>
+                                                        <option>Title and Body</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="searchFromStart">Select from:</label>
+                                                    <div class="form-row">
+                                                        <div class="col-lg-6">
+                                                            <select class="form-control" id="searchFromStart">
+                                                                <option>January</option>
+                                                                <option>February</option>
+                                                                <option>March</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <select class="form-control">
+                                                                <option selected>2005</option>
+                                                                <option>2006</option>
+                                                                <option>2007</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-0">
+                                                    <label for="searchFromEnd">to:</label>
+                                                    <div class="form-row">
+                                                        <div class="col-lg-6">
+                                                            <select class="form-control" id="searchFromEnd">
+                                                                <option>September</option>
+                                                                <option selected>October</option>
+                                                                <option>November</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <select class="form-control">
+                                                                <option>2017</option>
+                                                                <option>2018</option>
+                                                                <option selected>2019</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-lg-6 pl-lg-5 mb-0 border-left">
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allNews" checked>
+                                                    <label class="form-check-label" for="allNews">
+                                                        All news types
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="aquisitions">
+                                                    <label class="form-check-label" for="aquisitions">
+                                                        <span class="marker-color-1"></span>Acquisitions/Alliances/Disposals
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="AGM">
+                                                    <label class="form-check-label" for="AGM">
+                                                        <span class="marker-color-2"></span>AGM/EGM/Other meetings
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="board">
+                                                    <label class="form-check-label" for="board">
+                                                        <span class="marker-color-3"></span>Board/Management changes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="director">
+                                                    <label class="form-check-label" for="director">
+                                                        <span class="marker-color-4"></span>Director/PDMR Shareholding
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="holdings">
+                                                    <label class="form-check-label" for="holdings">
+                                                        <span class="marker-color-5"></span>Holding(s) in Company
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="results">
+                                                    <label class="form-check-label" for="results">
+                                                        <span class="marker-color-6"></span>Results/Trading updates
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="shareNotices">
+                                                    <label class="form-check-label" for="shareNotices">
+                                                        <span class="marker-color-7"></span>Share notices/Capital Structure
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group border-top pt-3 mb-0 mt-3 text-center">
+                                            <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-10 offset-lg-1 mt-3 animate" data-anim="fade-in-bottom">
+                                <ul class="list-group list-group-flush border-bottom border-top">
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">18 Oct 2019 – 18:28</span>
+                                        <span>
+                                            <span class="marker-color-5"></span>
+                                            <span>Holding(s) in Company</span>
+                                        </span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">18 Oct 2019 – 09:00</span>
+                                        <span>
+                                            <span class="marker-color-6"></span>
+                                            <span class="marker-color-7"></span>
+                                            <span>Block listing Interim Review</span>
+                                        </span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">02 Oct 2019 – 18:02</span>
+                                        <span>
+                                            <span class="marker-color-5"></span>
+                                            <span>Holding(s) in Company</span>
+                                        </span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">02 Sep 2019 – 16:40</span>
+                                        <span>Second Price Monitoring Extn</span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">02 Sep 2019 – 16:35</span>
+                                        <span>Price Monitoring Extension</span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">02 Sep 2019 – 08:00</span>
+                                        <span>
+                                            <span class="marker-color-5"></span>
+                                            <span>Total voting rights</span>
+                                        </span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">30 Aug 2019 – 16:45</span>
+                                        <span>
+                                            <span class="marker-color-4"></span>
+                                            <span>Director/PDMR Shareholding</span>
+                                        </span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">29 Aug 2019 – 07:00</span>
+                                        <span>Half-year report</span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">22 Aug 2019 – 11:08</span>
+                                        <span>
+                                            <span class="marker-color-6"></span>
+                                            <span>Notice of Results</span>
+                                        </span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">19 Jul 2019 – 18:03</span>
+                                        <span>
+                                            <span class="marker-color-5"></span>
+                                            <span>Holding(s) in Company</span>
+                                        </span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                    <li class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <span class="text-muted small">01 Jul 2019 – 16:22</span>
+                                        <span>
+                                            <span class="marker-color-7"></span>
+                                            <span>Total voting rights</span>
+                                        </span>
+                                        <span class="ml-auto small-icon download-icon"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-10 offset-lg-1 mt-5 animate" data-anim="fade-in-bottom">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>   
+                            </div>
                         </div>
                     </section>
                 </div>

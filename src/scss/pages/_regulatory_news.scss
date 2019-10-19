@@ -4,4 +4,79 @@
     .banner-background {
         background-image: none;
     }
+
+
+    button[data-toggle="collapse"] {
+
+        display: flex;
+        align-items: center;
+
+        span:nth-child(2) {
+            display: none;
+        }
+
+        .expand-icon {
+            
+            width: 1rem;
+            height: 1rem;
+
+            transition: transform .3s ease-in-out;
+            transform: rotate(0);
+            
+            svg {
+                display: block;
+                stroke: map-get($theme-colors, "secondary");
+                fill: none;
+                stroke-width: 2;
+            }
+        }
+
+        &:hover .expand-icon svg {
+            stroke: white;
+        }
+    }
+
+    button[data-toggle="collapse"] {
+        &[aria-expanded="true"] {
+            span:first-child {
+                display: none;
+            }
+            span:nth-child(2) {
+                display: inline;
+            }
+
+            .expand-icon {
+                
+                transform: rotate(180deg);
+                
+            }
+        }
+    }
+
+    span[class*="marker-"] {
+        display: inline-block;
+        
+        margin-right: $spacer * .5;
+
+        transform: translate(0, .2rem);
+
+        width: $spacer;
+        height: $spacer;
+
+        border-radius: 50%;
+
+    }
+
+
+    @each $color, $value in $chart-colors {
+        .marker-#{$color} {
+            background-color: $value;
+        }
+    }
+
+    .list-group-item {
+        > span:first-child {
+            flex-basis: 15%;
+        }
+    }
 }
