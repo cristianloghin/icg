@@ -4,6 +4,43 @@
 
     const viewport2 = document.querySelector('.viewport');
 
+
+    // use select boxes instead of tabs on mobile
+    try {
+        
+        const tab_select = document.querySelectorAll('.tab-select');
+        
+        tab_select.forEach( select => {
+            select.addEventListener('change', (e) => {
+                const id = e.target.value;
+                
+                const activeTab = document.querySelector('.nav-link.active');
+                const activePane = document.querySelector('.tab-pane.active');
+
+                const targetTab = document.querySelector('.nav-link#' + id +'-tab');
+                const targetPane = document.querySelector('.tab-pane#' + id);
+                
+                activePane.classList.toggle('show');
+                activePane.classList.toggle('active');
+                activeTab.classList.toggle('active');
+
+                targetPane.classList.toggle('show');
+                targetPane.classList.toggle('active');
+                
+                const animate = targetPane.querySelectorAll('.animate');
+                animate.forEach( element => {
+                    element.classList.toggle('in');
+                });
+
+                targetTab.classList.toggle('active');
+                
+            });
+        });
+    } catch (err) { 
+        console.error("No Tab selects found:", err);
+    }
+
+
     // Initialize Animations (on Scroll)
     try {
         const animateElements = document.getElementsByClassName('animate');

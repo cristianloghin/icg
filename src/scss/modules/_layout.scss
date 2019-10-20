@@ -41,10 +41,13 @@
         height: 90vh;
         background-image: linear-gradient(180deg, $white 50%, transparent);
 
+        &.no-image {
+            height: auto;
+        }
+
         @include media-breakpoint-up(md) {
             padding-top: 7rem;
             padding-bottom: 7rem;
-            height: auto;
         }
 
         @include media-breakpoint-up(lg) {

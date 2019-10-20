@@ -12,5 +12,17 @@
             stroke: map-get($theme-colors, secondary);
         }
     }
+
+    .blockquote p {
+        font-size: $font-size-base;
+
+        @include media-breakpoint-up(md) {
+            font-size: $font-size-lg;
+        }
+    }
+
+    table {
+        
+    }
     
 }

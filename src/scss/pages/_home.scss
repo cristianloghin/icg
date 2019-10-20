@@ -41,25 +41,68 @@
         position: relative;
 
         > div:first-child {
-            position: absolute;
-            bottom: 1rem;
+            position: relative;
+            height: 100vh;
             width: 100%;
-            z-index: 2;
 
-            @include media-breakpoint-up(md) {
-                bottom: 4rem;
+            > div {
+                position: absolute;
+                bottom: 1rem;
+                width: 100%;
+                z-index: 2;
+
+                @include media-breakpoint-up(lg) {
+                    bottom: 4rem;
+                }
             }
         }
 
         > div:last-child {
-            position: absolute;
-            z-index: 1;
-            width: 100%;
-            top: 100%;
-
-            @include media-breakpoint-up(md) {
-                top: auto;
+            
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                left: 0;
                 bottom: 0;
+                width: 100%;
+            }
+
+            .row {
+            
+                > div:first-child {
+                    padding-bottom: $spacer;
+                    @include media-breakpoint-up(md) {
+                        padding-bottom: 0;
+                    }
+                }
+
+                > div:last-child {
+                
+                    padding-top: $spacer;
+                    border-top: $border-width solid map-get($theme-colors, "info");
+
+                    @include media-breakpoint-up(md) {
+                        padding-top: 0;
+                        border-top: none;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        justify-content: flex-end;
+                    }
+                }
+
+                .small-icon + span {
+                    width: 75%;
+                    @include media-breakpoint-up(lg) {
+                        width: auto;
+                    }
+                }
+
+                .btn {
+                    margin-left: auto;
+                    @include media-breakpoint-up(lg) {
+                        margin-left: .5rem;
+                    }
+                }
             }
         }
     }
@@ -67,5 +110,38 @@
     .animated-icon-md {
         width: 35%;
         margin: auto;
+    }
+
+    .list-group-item {
+
+        padding: .75rem;
+        align-items: center;
+
+        > span:first-child {
+            width: 85%;
+            > span {
+                display: block;
+            }
+        }
+        
+
+        @include media-breakpoint-up(md) {
+
+            padding: .75rem 1rem;
+
+            > span:first-child {
+                width: 85%;
+                > span {
+                    display: inline-block;
+                }
+            }
+
+            .text-muted {
+                width: 15%;
+            }
+            
+        }
+
+        
     }
 }

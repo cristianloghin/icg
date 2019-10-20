@@ -1,7 +1,33 @@
 "use strict";
 
 (function () {
-  var viewport2 = document.querySelector('.viewport'); // Initialize Animations (on Scroll)
+  var viewport2 = document.querySelector('.viewport'); // use select boxes instead of tabs on mobile
+
+  try {
+    var tab_select = document.querySelectorAll('.tab-select');
+    tab_select.forEach(function (select) {
+      select.addEventListener('change', function (e) {
+        var id = e.target.value;
+        var activeTab = document.querySelector('.nav-link.active');
+        var activePane = document.querySelector('.tab-pane.active');
+        var targetTab = document.querySelector('.nav-link#' + id + '-tab');
+        var targetPane = document.querySelector('.tab-pane#' + id);
+        activePane.classList.toggle('show');
+        activePane.classList.toggle('active');
+        activeTab.classList.toggle('active');
+        targetPane.classList.toggle('show');
+        targetPane.classList.toggle('active');
+        var animate = targetPane.querySelectorAll('.animate');
+        animate.forEach(function (element) {
+          element.classList.toggle('in');
+        });
+        targetTab.classList.toggle('active');
+      });
+    });
+  } catch (err) {
+    console.error("No Tab selects found:", err);
+  } // Initialize Animations (on Scroll)
+
 
   try {
     var animateElements = document.getElementsByClassName('animate');

@@ -14,7 +14,7 @@
             <!-- Page Content -->
             <div class="flex-grow-1 content-wrapper">
                 <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
-                    <div class="page-banner w-100 pb-5">
+                    <div class="page-banner no-image w-100 pb-5">
                         <div class="container d-flex flex-column">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -31,9 +31,9 @@
                                 <p class="lead text-center text-primary pt-5">The Board consists of two executive and four non-executive Directors. Details of the professional and educational backgrounds of each director encompassing the experience and expertise that they bring to the Board are set out below.</p>
                             </div>
                         </div>
-                        <div class="row d-none d-sm-flex pt-5 animate" data-anim="fade-in-bottom" data-anim-delay="250">
+                        <div class="row pt-5 animate" data-anim="fade-in-bottom" data-anim-delay="250">
                             <div class="col-12 col-lg-10 offset-lg-1">
-                                <ul class="nav nav-tabs justify-content-center" id="directorsTab" role="tablist">
+                                <ul class="nav nav-tabs justify-content-center d-none d-md-flex" id="directorsTab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="home" aria-selected="true">All</a>
                                     </li>
@@ -47,6 +47,14 @@
                                         <a class="nav-link" id="secretary-tab" data-toggle="tab" href="#secretary" role="tab" aria-controls="secretary" aria-selected="false">Secretary</a>
                                     </li>
                                 </ul>
+                                <div class="input-group d-md-none">
+                                    <select class="custom-select tab-select">
+                                        <option value="all" selected>All</option>
+                                        <option value="nonexecutive">Non-Executive</option>
+                                        <option value="executive">Executive</option>
+                                        <option value="secretary">Secretary</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </section>

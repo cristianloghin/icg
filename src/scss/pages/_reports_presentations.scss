@@ -5,6 +5,37 @@
         background-image: none;
     }
 
-    
+    .list-group-item {
+
+        padding: .75rem;
+        align-items: center;
+
+        > span:first-child {
+            width: 85%;
+            > span {
+                display: block;
+            }
+        }
+        
+
+        @include media-breakpoint-up(md) {
+
+            padding: .75rem 1rem;
+
+            > span:first-child {
+                width: 85%;
+                > span {
+                    display: inline-block;
+                }
+            }
+
+            .text-muted {
+                width: 15%;
+            }
+            
+        }
+
+        
+    }
     
 }

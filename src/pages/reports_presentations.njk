@@ -14,7 +14,7 @@
             <!-- Page Content -->
             <div class="flex-grow-1 content-wrapper">
                 <section class="jumbotron jumbotron-fluid text-center py-0 mb-0 bg-transparent position-relative">
-                    <div class="page-banner w-100 pb-5">
+                    <div class="page-banner no-image w-100 pb-5">
                         <div class="container d-flex flex-column">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -30,13 +30,13 @@
                             <div class="col-lg-8 offset-lg-2 animate" data-anim="fade-in-bottom" data-anim-delay="250">
                                 <p class="lead text-center text-primary">Explore Irish Continental Group’s annual reports, full and half-year results, management statements and trading updates.</p>
                             </div>
-                            <div class="col-lg-5 offset-lg-1 mt-4">
+                            <div class="col-md-6 col-lg-5 offset-lg-1 mt-4">
                                 <div class="card animate" data-anim="fade-in-left" data-anim-delay="500">
                                     <div class="row no-gutters">
-                                        <div class="col-md-4 p-3">
+                                        <div class="col-6 col-md-6 col-lg-4 p-3">
                                             <img src="assets/images/HY-19.jpg" class="card-img" alt="...">
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-6 col-lg-8">
                                             <div class="card-body h-100 d-flex flex-column">
                                                 <p class="text-muted">Latest Interim Report</p>
                                                 <h4 class="text-secondary mb-0 card-text">2019 Half Year Report</h4>
@@ -47,13 +47,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 mt-4">
+                            <div class="col-md-6 col-lg-5 mt-4">
                                 <div class="card animate" data-anim="fade-in-right" data-anim-delay="750">
                                     <div class="row no-gutters">
-                                        <div class="col-md-4 p-3">
+                                        <div class="col-6 col-md-6 col-lg-4 p-3">
                                             <img src="assets/images/AR-18.jpg" class="card-img" alt="...">
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-6 col-lg-8">
                                             <div class="card-body h-100 d-flex flex-column">
                                                 <p class="text-muted">Latest Annual Report</p>
                                                 <h4 class="text-secondary mb-0 card-text">2018 Annual Report</h4>
@@ -69,80 +69,113 @@
                     <section class="pb-5 container">
                         <div class="row animate" data-anim="fade-in-bottom" data-anim-delay="1000">
                             <div class="col-lg-10 offset-lg-1 mt-4">
-                                <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                                <div class="nav nav-tabs justify-content-center d-none d-md-flex" id="nav-tab" role="tablist">
                                     <a class="nav-item nav-link active" id="nav-2019-tab" data-toggle="tab" href="#nav-2019" role="tab" aria-controls="nav-2019" aria-selected="true">2019</a>
                                     <a class="nav-item nav-link" id="nav-2018-tab" data-toggle="tab" href="#nav-2018" role="tab" aria-controls="nav-2018" aria-selected="false">2018</a>
                                     <a class="nav-item nav-link" id="nav-2017-tab" data-toggle="tab" href="#nav-2017" role="tab" aria-controls="nav-2017" aria-selected="false">2017</a>
                                     <a class="nav-item nav-link" id="nav-2016-tab" data-toggle="tab" href="#nav-2016" role="tab" aria-controls="nav-2016" aria-selected="false">2016</a>
                                     <a class="nav-item nav-link" id="nav-2015-tab" data-toggle="tab" href="#nav-2015" role="tab" aria-controls="nav-2015" aria-selected="false">2015</a>
                                 </div>
+                                <div class="input-group d-md-none">
+                                    <select class="custom-select tab-select">
+                                        <option value="nav-2019" selected>2019</option>
+                                        <option value="nav-2018">2018</option>
+                                        <option value="nav-2017">2017</option>
+                                        <option value="nav-2016">2016</option>
+                                        <option value="nav-2015">2015</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-10 offset-lg-1">
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="nav-2019" role="tabpanel" aria-labelledby="2019-tab">
                                         <ul class="list-group list-group-flush border-bottom">
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">17 Sep 2019</span>
-                                                <span>Half Year Results 2019</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">17 Sep 2019</span>
+                                                    <span>Half Year Results 2019</span>
+                                                </span>
                                                 <span class="ml-auto small-icon report-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">16 Sep 2019</span>
-                                                <span>Half Year Results 2019 Presentation</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">16 Sep 2019</span>
+                                                    <span>Half Year Results 2019 Presentation</span>
+                                                </span>
                                                 <span class="ml-auto small-icon presentation-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">17 May 2019</span>
-                                                <span>Trading Update May 2019</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">17 May 2019</span>
+                                                    <span>Trading Update May 2019</span>
+                                                </span>
                                                 <span class="ml-auto small-icon report-icon"></span>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="tab-pane fade" id="nav-2018" role="tabpanel" aria-labelledby="2018-tab">
                                         <ul class="list-group list-group-flush border-bottom">
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">25 Nov 2018</span>
-                                                <span>Annual report 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">25 Nov 2018</span>
+                                                    <span>Annual report 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon report-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">12 Nov 2018</span>
-                                                <span>Preliminary Statement of Results 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">12 Nov 2018</span>
+                                                    <span>Preliminary Statement of Results 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon report-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">10 Nov 2018</span>
-                                                <span>Full Year Results Presentation 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">10 Nov 2018</span>
+                                                    <span>Full Year Results Presentation 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon presentation-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">10 Nov 2018</span>
-                                                <span>Trading Update Nov 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">10 Nov 2018</span>
+                                                    <span>Trading Update Nov 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon report-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">10 Nov 2018</span>
-                                                <span>Trading Update Presentation November 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">10 Nov 2018</span>
+                                                    <span>Trading Update Presentation November 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon presentation-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">23 May 2018</span>
-                                                <span>Half Year Results Presentation 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">23 May 2018</span>
+                                                    <span>Half Year Results Presentation 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon presentation-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">22 May 2018</span>
-                                                <span>Half Year Results 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">22 May 2018</span>
+                                                    <span>Half Year Results 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon report-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">17 May 2019</span>
-                                                <span>ICG Trading Update May 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">17 May 2019</span>
+                                                    <span>ICG Trading Update May 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon report-icon"></span>
                                             </li>
-                                            <li class="list-group-item list-group-item-action d-flex align-items-center">
-                                                <span class="text-muted small w-15">8 Jan 2018</span>
-                                                <span>Trading Update Presentation January 2018</span>
+                                            <li class="list-group-item list-group-item-action d-flex">
+                                                <span>
+                                                    <span class="text-muted small">8 Jan 2018</span>
+                                                    <span>Trading Update Presentation January 2018</span>
+                                                </span>
                                                 <span class="ml-auto small-icon presentation-icon"></span>
                                             </li>
                                         </ul>

@@ -15,15 +15,37 @@
     .jumbotron {
 
     }
+    .subs-wrapper {
 
-    .subs-logo {
-        flex: 0 1 20%;
-        padding: $spacer * 2.5;
+        flex-direction: column;
 
-        &:hover {
-            transform: scale(1.2);
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+        }
+
+        .subs-logo {
+            
+            padding: $spacer;
+            width: 50%;
+            
+            @include media-breakpoint-up(lg) {
+                flex: 0 1 20%;
+                padding: $spacer * 2.5;
+            }
+    
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .subs-logo + .subs-logo {
+            border-top: $border-width solid $border-color;
+            @include media-breakpoint-up(md) {
+                border-top: none;
+            }
         }
     }
+    
 
     section:last-child {
         img {
@@ -36,6 +58,6 @@
 
     .animated-icon-md {
         width: 35%;
-        margin: auto;
+        margin: 0 auto;
     }
 }
