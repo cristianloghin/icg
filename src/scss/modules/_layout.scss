@@ -1,37 +1,58 @@
-.viewport {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    perspective: 2px;
-    perspective-origin: 0%;
-    display: flex;
+@mixin parallax-support() {
+    @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+        @content;
+    }
+}
 
-    -webkit-overflow-scrolling: touch;
+body {
+    @include parallax-support() {
+        transform: translateZ(0);
+    }
+}
+
+.viewport {
+    @include parallax-support() {
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform: translateZ(0);
+        perspective: 1px;
+        perspective-origin: top left;
+        -webkit-overflow-scrolling: touch;
+    }
 
     scroll-behavior: smooth;
 }
 
-.banner-background {
+.banner-background,
+.page-content {
     position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: 0;
-    transform: translateZ(-2px) scale(2);
+    // parallax effect
+    @include parallax-support() {       
+        transform-origin: top left;
+    }
+}
 
+.banner-background {
+    @include parallax-support() {
+        // parallax effect
+        transform: translateZ(-1px) scale(2);
+    }
+    // background
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
-    background-position-y: 4rem;
+    background-position: center;
 }
 
 .page-content {
-
-    transform: translateZ(0px);
-    width: 100%;
+    @include parallax-support() {
+        // parallax effect
+        transform: translateZ(0px);
+    }
 }
 
 .viewport:not(#home) {
@@ -39,7 +60,7 @@
         padding-top: 6rem;
 
         height: 90vh;
-        background-image: linear-gradient(180deg, $white 50%, transparent);
+        background-image: linear-gradient(180deg, $white 50%, rgba(255, 255, 255, 0));
 
         &.no-image {
             height: auto;

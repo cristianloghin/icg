@@ -61,6 +61,7 @@ function watchTask(){
     console.log(fileWatch);
     watch(fileWatch, series(
         parallel(scssTask, jsCompile, nunjucks),
+        injectFaviconMarkups,
         browserSyncReload
         )
     );    
