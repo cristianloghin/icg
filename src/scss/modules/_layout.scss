@@ -51,8 +51,11 @@
         }
 
         @include media-breakpoint-up(lg) {
+            height: auto;
+            background-image: none;
+            background-color: $white;
             padding-top: 10rem;
-            padding-bottom: 10rem;
+            padding-bottom: 2rem;
         }
     }
 }
