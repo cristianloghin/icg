@@ -3,7 +3,7 @@
     
     // disable animate on scroll functionality on smaller devices
     // consider reworking the code
-    
+
     @include parallax-support {
         transition: transform .3s ease-in-out, opacity .3s ease-in-out;
 
