@@ -1,0 +1,57 @@
+<!-- safety.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('safety')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="safety">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center vh-100 py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Safety</h1>
+                                    <p class="lead text-primary">The promotion and maintenance of a strong safety culture across all activities is a principle strategy of Irish Continental Group, to not only ensure the safety, security and well-being of our people and passengers, but also so that all stakeholders reap the competitive rewards that come from giving safety top priority.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-transparent text-center w-100 position-absolute" style="bottom: 0">
+                        <span class="large-icon down-icon" id="scrollDown"></span>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="container py-5">
+                        <div class="row">
+                            <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2 animate" data-anim="fade-in-bottom">
+                                <p>The Group’s operations span a wide range of activities, both ashore and afloat. It is a matter of high priority that all our activities are conducted in a manner that ensures the safety and security of all our people, and all those who travel on board our ships or visit our terminals.</p>
+                                <p>The bedrock of Irish Continental Group’s safety performance is our people. We place strategic emphasis on ensuring all those who work within the Group’s sphere of operations are competent, provided with a high level of safety and quality training and information, and are encouraged to engage with the Group’s continuous improvement philosophy.</p>
+                                <p>Compliance with policy and procedures, both ashore and afloat, is monitored by regular and detailed audits. Audits are conducted by trained and experienced auditors in an open yet focused manner that drives compliance and improvement. Senior management monitor safety and audit performance across the Group, identifying and addressing safety trends and opportunities for improvement where they may arise.</p>
+                                <img src="assets/images/safety-pic-1.jpg" class="rounded float-md-left ml-lg-n4 mr-md-4 mb-4 animate" data-anim="fade-in-left" data-anim-delay="500">
+                                <p>In addition to the Group’s own internal verification procedures, our activities are subject to regular routine inspection by national and international statutory bodies. They, like us, set high standards to ensure the safety and well-being of all personnel, passengers and cargoes; standards that we as a Group are ready to meet and exceed.</p>
+                                <h5 class="text-secondary">Ashore</h5>
+                                <p>As a minimum, all of the Group’s activities are conducted in strict compliance with the various statutory health and safety standards and international maritime regulations that apply. In accordance with the Safety, Health and Welfare at Work Act and its equivalents in other jurisdictions, the Group has in place Safety Policies and Safety Statements that guide our activities. We have in place a system of hazard identification and risk assessment that ensures all necessary steps are taken to minimise and mitigate safety risks. Laid down procedures ensure that activities and operations are conducted in a consistent and safe manner. By fostering a culture of employee competence and participation we empower our employees to continuously improve the efficiency and safety of our activities, so contributing to a safe environment for all.</p>
+                                <h5 class="text-secondary">At Sea</h5>
+                                <p>Irish Continental Group ensures that all its ships are designed, operated and maintained in compliance with the International Convention for the Safety of Life at Sea (SOLAS). This Convention is administered by the UN’s International Maritime Organisation and is subject to continuous international review and updating, ensuring ship safety standards keep pace with societal expectations and technological advances.</p>
+                                <p>The safety and security of ship’s crews, passengers and cargoes is critical to our business, and is always the primary consideration. Irish Continental Group ships are certified in accordance with the International Safety Management (ISM) Code, the international standard for the safe management and operation of ships and for pollution prevention.</p>
+                                <p>Irish Continental Group also operates in full compliance with the International Ship and Port Facility Security (ISPS) Code on board all ships and at all locations. The on-board management of the Irish Ferries operated vessels was performed by Matrix Ship Management Limited, Cyprus, on behalf of Irish Continental Group.</p>
+                                <p>While the focus is on accident prevention where incidents do occur, effective internal and external reporting and investigation systems are employed to identify the cause of such incidents and put in place actions to prevent recurrence. Due to the highly regulated environment in which we operate, incidents may be subject to external investigation by the appropriate regulatory authority. The Group will always work with the authorities toward a successful and worthwhile investigation outcome.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}

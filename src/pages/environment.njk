@@ -1,0 +1,68 @@
+<!-- environment.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <!-- Fixed Header -->
+    {% import 'partials/macro-header.njk' as header %}
+    {{header.active('environment')}}
+    
+    <!-- Content -->
+    <div class="viewport" id="environment">
+        <div class="banner-background"></div>
+        <div class="page-content d-flex flex-column">
+            <!-- Page Content -->
+            <div class="flex-grow-1 content-wrapper">
+                <section class="jumbotron jumbotron-fluid text-center vh-100 py-0 mb-0 bg-transparent position-relative">
+                    <div class="page-banner w-100">
+                        <div class="container d-flex flex-column">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <h1 class="text-secondary">Environment</h1>
+                                    <p class="lead text-primary">Irish Continental Group is committed to carrying out its business activities in an environmentally friendly and safe manner. ICG is cognisant of its responsibilities to society and seeks to drive environmental efficiency across all its activities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-transparent text-center w-100 position-absolute" style="bottom: 0">
+                        <span class="large-icon down-icon" id="scrollDown"></span>
+                    </div>
+                </section>
+                <div class="content-sections bg-white">
+                    <section class="container py-5">
+                        <div class="row">
+                            <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2 animate" data-anim="fade-in-bottom">
+                                <h5 class="text-secondary">Ship Operations</h5>
+                                All forms of transport have an unavoidable impact on the environment. Though one of the most environmentally efficient modes of transport, as measured by cargo tonnes per kilometre, management of the environmental impacts of shipping requires ongoing action and investment by the Group. The industry is subject to a high degree of regulation and is supervised by a large number of regulators globally with the principle standards emanating from the International Maritime Organisation, a UN sponsored body, being adopted by the European Union. The principal areas of environmental management include;</p>
+                                <h6 class="text-primary">Management of Exhaust Carbon Dioxide (CO2) Emissions</h6>
+                                <p>The consumption of fossil fuels results in carbon dioxide output, the volume of which is directly proportional to fuel consumption. The Group seeks to minimise fuel usage as much as possible consistent with the safe and efficient operation of the fleet. Energy efficiency awareness training is undertaken for all crew to highlight obvious areas where they can contribute to power savings. The Group has implemented a Ship Energy Efficiency Management Plan for each vessel which sets targets for a reduction in CO2 emissions. This is achieved through technical and operational initiatives and investment in latest technologies.</p>
+                                <img src="assets/images/safety-pic-2.jpg" class="rounded float-right mr-lg-n4 ml-md-4 mb-4 animate" data-anim="fade-in-right" data-anim-delay="500">
+                                <p>Our most recent initiative has been the fitting of new energy efficient propeller blades and new rotating propeller caps on the cruise ferry Ulysses. The Group’s two new builds have been designed in line with the current energy efficiency design indices.</p>
+                                <h6 class="text-primary">Management of Exhaust Sulphur emissions</h6>
+                                <p>Sulphur emissions are dependent on the volume and type of fuel consumed. In addition to the management of fuel consumption the Group in 2010 reduced the sulphur content of the fuels its vessels consumes from 3.5% to 1.5%. From 1 January 2020 the Group will further reduce the sulphur content of its fuel oils consumed to 0.5% or employ Exhaust Gas Cleaning Systems (EGCS) to achieve a similar sulphur emissions effect. Additionally, all Group vessels since 2015 consume 0.1% sulphur content fuel when operating in the Sulphur Emission Control Areas (SECAs) in the English Channel and North Sea on its container services and cruise ferry services to France.</p>
+                                <p>The Group is investing in EGCS across its fleet. This allows the vessels to consume higher sulphur fuels but cleans the exhaust emissions to similar levels as had low sulphur fuels being consumed. The latest addition to the Irish Ferries fleet, the W.B. Yeats was designed with EGCS and is already operating within the 0.5% and 0.1% limits. The second new build scheduled for delivery in late 2020 will also incorporate EGCS. The Group has approved further investment for retro fitting of EGCS on its cruise ferries Ulysses and Isle of Inishmore and all its owned container vessels.</p>
+                                <h6 class="text-primary">Habitat Protection</h6>
+                                <p>The intake and discharge of ballast water (sea water) is an integral part of vessel stability management, though poor management of ballast water systems can damage local biodiversity through transference of non-native marine species.</p>
+                                <p>The Group has implemented a Ballast Water and Sediments Management Plan across all its fleet for correct management of ballast water to help prevent the spread of harmful marine species by transference. Its new vessels have been designed with ballast water treatment systems. The painting of the underwater hulls of all our vessels is with tin-free, non-toxic paints to avoid the release of harmful agents into the sea. We also minimise to the best of our ability wave generation to minimise disturbance of coastal habitats while we strive to be at the forefront in promoting customer awareness of the marine environment.</p>
+                                <h6 class="text-primary">Other areas</h6>
+                                <p>The disposal of waste at sea is strictly prohibited by regulation and all our vessels have a waste disposal plan. All vessels use oil recovery systems to recover spent oils which are then sent for recycling to processors with regulatory approvals. All other vessel waste is segregated where possible and also sent for recycling at approved facilities. The Group is currently exploring the elimination of one use plastics in the catering activities on board its vessels. To date the use of plastic disposable cups have been changed to a biodegradable alternative.</p>
+                                <img src="assets/images/safety-pic-3.jpg" class="rounded float-left ml-lg-n4 mr-md-4 mb-4 animate" data-anim="fade-in-left" data-anim-delay="500">
+                                <h5 class="text-secondary">Hotel and Catering Activities</h5>
+                                <p>We provide accommodation and catering facilities on board our vessels for our 1.5 million guests annually. Conscious of the impacts this may have we constantly seek to minimise the impact on the environment of these activities. Initiatives include fresh water conservation whereby we have installed water saving devices on our vessels, a move to containerised provisioning of our vessels, sustainable sourcing of food ingredients and a move away from single use plastics.</p>
+                                <h5 class="text-secondary">Shore Based Activities</h5>
+                                <h6 class="text-primary">Container Terminal Activities</h6>
+                                <p>Our land based terminals at Dublin and Belfast utilise energy in the form of direct consumption of fossil fuels and electricity generating exhaust emissions. The nature of operations is that terminals generate road traffic and certain levels of noise.</p>
+                                <p>The owned ship to shore gantries at Dublin are powered by electricity together with the two rubber tyred gantries commissioned during 2018. Electric equipment together with low frequency alarms fitted on mobile equipment reduces sound generation and provides better energy efficiency. A new transport management system is also being trialled at Dublin, which by reducing waiting times will result in less truck emissions on the part of our haulage sub-contractors.</p>
+                                <h5 class="text-secondary">Office Locations</h5>
+                                <p>The Group encourages staff at its office locations to be environmentally aware highlighting waste and recycling. Recent initiatives in the last year include a consolidation of office locations and installation of energy efficient lighting.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Footer -->
+            {% include "partials/footer.njk" %}
+        </div>
+    </div>
+
+{% endblock %}
